@@ -1,0 +1,138 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { pricingPlans } from '../data/pricing';
+---
+
+<PageLayout 
+  title="Pricing"
+  description="Simple, transparent pricing for developers and teams. Start free and scale as you grow."
+>
+  <!-- Hero Section -->
+  <section class="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+    <div class="container mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6" data-i18n="pricingTitle">
+        Simple, Transparent Pricing
+      </h1>
+      <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto" data-i18n="pricingSubtitle">
+        Start free and scale as you grow. No hidden fees, no surprises.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pricing Cards -->
+  <section class="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {pricingPlans.map((plan) => (
+          <div class={`relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg ${plan.popular ? 'border-2 border-transparent bg-gradient-to-r from-blue-500 to-indigo-600 p-0.5 scale-105' : 'border border-gray-200 dark:border-gray-700 p-8'} transition-colors duration-300`}>
+            {plan.popular && (
+              <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+                <span class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold" data-i18n="mostPopular">
+                  Most Popular
+                </span>
+              </div>
+            )}
+            
+            <!-- Inner content wrapper for popular cards -->
+            <div class={plan.popular ? 'bg-white dark:bg-gray-800 rounded-2xl p-8' : ''}>
+              <div class="text-center mb-8">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">{plan.name}</h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-6">{plan.description}</p>
+                
+                <div class="mb-6">
+                  <span class="text-4xl font-bold text-gray-900 dark:text-white">
+                    ${plan.price.monthly}
+                  </span>
+                  <span class="text-gray-600 dark:text-gray-400" data-i18n="perMonth">/month</span>
+                  {plan.price.yearly > 0 && (
+                    <div class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                      ${plan.price.yearly}<span data-i18n="perYear">/year</span> (<span data-i18n="save">save</span> ${(plan.price.monthly * 12) - plan.price.yearly})
+                    </div>
+                  )}
+                </div>
+              </div>
+              
+              <ul class="space-y-4 mb-8">
+                {plan.features.map((feature) => (
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-gray-700 dark:text-gray-300">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              {plan.limitations && plan.limitations.length > 0 && (
+                <ul class="space-y-2 mb-8 border-t border-gray-200 dark:border-gray-700 pt-6">
+                  {plan.limitations.map((limitation) => (
+                    <li class="flex items-start text-sm text-gray-500 dark:text-gray-400">
+                      <svg class="w-4 h-4 text-gray-400 dark:text-gray-500 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                      </svg>
+                      {limitation}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              
+              <a 
+                href={plan.id === 'enterprise' ? '/contact' : 'https://app.snapbyte.com/signup'}
+                class={`block w-full text-center py-4 px-6 rounded-lg font-semibold transition-colors duration-200 ${
+                  plan.popular 
+                    ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white hover:from-blue-600 hover:to-indigo-700' 
+                    : 'bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600'
+                }`}
+              >
+                {plan.cta}
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4" data-i18n="faqTitle">
+          Frequently Asked Questions
+        </h2>
+      </div>
+      
+      <div class="max-w-3xl mx-auto space-y-6">
+        <div class="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-sm transition-colors duration-300">
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2" data-i18n="faqQuestion1">
+            Can I change plans anytime?
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300" data-i18n="faqAnswer1">
+            Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, 
+            and we'll prorate any billing adjustments.
+          </p>
+        </div>
+        
+        <div class="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-sm transition-colors duration-300">
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2" data-i18n="faqQuestion2">
+            What happens if I exceed my limits?
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300" data-i18n="faqAnswer2">
+            We'll notify you before you reach your limits. For storage and bandwidth, 
+            you can either upgrade your plan or purchase additional resources as needed.
+          </p>
+        </div>
+        
+        <div class="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-sm transition-colors duration-300">
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2" data-i18n="faqQuestion3">
+            Do you offer custom enterprise solutions?
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300" data-i18n="faqAnswer3">
+            Absolutely! Our Enterprise plan includes custom configurations, dedicated support, 
+            and can be tailored to meet specific compliance and performance requirements.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</PageLayout>

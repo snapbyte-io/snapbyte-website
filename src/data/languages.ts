@@ -1,0 +1,554 @@
+export interface Language {
+  code: string;
+  name: string;
+  flag: string;
+}
+
+export interface Translation {
+  // Navigation
+  home: string;
+  features: string;
+  pricing: string;
+  about: string;
+  blog: string;
+  contact: string;
+  
+  // Hero Section
+  heroTitle: string;
+  heroSubtitle: string;
+  heroDescription: string;
+  getStarted: string;
+  learnMore: string;
+  
+  // Features Section
+  featuresTitle: string;
+  featuresSubtitle: string;
+  intelligentOptimization: string;
+  intelligentOptimizationDesc: string;
+  globalEdgeNetwork: string;
+  globalEdgeNetworkDesc: string;
+  developerFriendlyAPI: string;
+  developerFriendlyAPIDesc: string;
+  realTimeAnalytics: string;
+  realTimeAnalyticsDesc: string;
+  securityReliability: string;
+  securityReliabilityDesc: string;
+  easyIntegration: string;
+  easyIntegrationDesc: string;
+  
+  // CTA
+  ctaTitle: string;
+  ctaDescription: string;
+  startFreeTrial: string;
+  
+  // Theme
+  lightMode: string;
+  darkMode: string;
+  
+  // Auth
+  signin: string;
+  
+  // Pricing Page
+  pricingTitle: string;
+  pricingSubtitle: string;
+  pricingDescription: string;
+  mostPopular: string;
+  perMonth: string;
+  perYear: string;
+  save: string;
+  
+  // About Page
+  aboutTitle: string;
+  aboutDescription: string;
+  
+  // Contact Page
+  contactTitle: string;
+  contactDescription: string;
+  
+  // FAQ
+  faqTitle: string;
+  faqQuestion1: string;
+  faqAnswer1: string;
+  faqQuestion2: string;
+  faqAnswer2: string;
+  faqQuestion3: string;
+  faqAnswer3: string;
+  
+  // Footer & Legal
+  navigation: string;
+  privacyPolicy: string;
+  termsOfService: string;
+  allRightsReserved: string;
+}
+
+export const languages: Language[] = [
+  { code: 'en', name: 'English', flag: '🇺🇸' },
+  { code: 'es', name: 'Español', flag: '🇪🇸' },
+  { code: 'fr', name: 'Français', flag: '🇫🇷' },
+  { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+  { code: 'ja', name: '日本語', flag: '🇯🇵' },
+  { code: 'zh', name: '中文', flag: '🇨🇳' },
+];
+
+export const translations: Record<string, Translation> = {
+  en: {
+    // Navigation
+    home: 'Home',
+    features: 'Features',
+    pricing: 'Pricing',
+    about: 'About',
+    blog: 'Blog',
+    contact: 'Contact',
+    
+    // Hero Section
+    heroTitle: 'Lightning-Fast File Delivery',
+    heroSubtitle: 'For Modern Applications',
+    heroDescription: 'Optimize, transform, and deliver files at scale with our intelligent CDN. Built for developers who demand performance.',
+    getStarted: 'Get Started',
+    learnMore: 'Learn More',
+    
+    // Features Section
+    featuresTitle: 'Everything You Need to Deliver Fast',
+    featuresSubtitle: 'Powerful features designed to make file delivery effortless, fast, and reliable for developers and their users.',
+    intelligentOptimization: 'Intelligent Optimization',
+    intelligentOptimizationDesc: 'Automatic compression, format conversion, and sizing. WebP, AVIF, and responsive variants generated on-the-fly.',
+    globalEdgeNetwork: 'Global Edge Network',
+    globalEdgeNetworkDesc: '150+ edge locations worldwide ensure your files are delivered from the closest point to your users for maximum speed.',
+    developerFriendlyAPI: 'Developer-Friendly API',
+    developerFriendlyAPIDesc: 'Simple, intuitive API with comprehensive SDKs. Get started in minutes, not hours of configuration.',
+    realTimeAnalytics: 'Real-time Analytics',
+    realTimeAnalyticsDesc: 'Monitor performance, track usage, and optimize delivery with detailed analytics and insights dashboard.',
+    securityReliability: 'Security & Reliability',
+    securityReliabilityDesc: 'Enterprise-grade security with 99.9% uptime SLA. Your files are protected and always available.',
+    easyIntegration: 'Easy Integration',
+    easyIntegrationDesc: 'Works with any framework or platform. Drop-in replacement for existing file storage with zero configuration.',
+    
+    // CTA
+    ctaTitle: 'Ready to Get Started?',
+    ctaDescription: 'Try Snapbyte today and experience the difference intelligent file optimization can make for your application.',
+    startFreeTrial: 'Start Free Trial',
+    
+    // Theme
+    lightMode: 'Light Mode',
+    darkMode: 'Dark Mode',
+    
+    // Auth
+    signin: 'Sign In',
+    
+    // Pricing Page
+    pricingTitle: 'Simple, Transparent Pricing',
+    pricingSubtitle: 'Start free and scale as you grow. No hidden fees, no surprises.',
+    pricingDescription: 'Simple, transparent pricing for developers and teams. Start free and scale as you grow.',
+    mostPopular: 'Most Popular',
+    perMonth: '/month',
+    perYear: '/year',
+    save: 'save',
+    
+    // About Page
+    aboutTitle: 'About Snapbyte',
+    aboutDescription: 'Learn more about our mission to make file delivery fast and simple for developers.',
+    
+    // Contact Page
+    contactTitle: 'Contact Us',
+    contactDescription: 'Get in touch with our team. We\'re here to help you succeed.',
+    
+    // FAQ
+    faqTitle: 'Frequently Asked Questions',
+    faqQuestion1: 'Can I change plans anytime?',
+    faqAnswer1: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we\'ll prorate any billing adjustments.',
+    faqQuestion2: 'What happens if I exceed my limits?',
+    faqAnswer2: 'We\'ll notify you before you reach your limits. For storage and bandwidth, you can either upgrade your plan or purchase additional resources as needed.',
+    faqQuestion3: 'Do you offer custom enterprise solutions?',
+    faqAnswer3: 'Absolutely! Our Enterprise plan includes custom configurations, dedicated support, and can be tailored to meet specific compliance and performance requirements.',
+    
+    // Footer & Legal
+    navigation: 'Navigation',
+    privacyPolicy: 'Privacy Policy',
+    termsOfService: 'Terms of Service',
+    allRightsReserved: 'All rights reserved',
+  },
+  es: {
+    // Navigation
+    home: 'Inicio',
+    features: 'Características',
+    pricing: 'Precios',
+    about: 'Acerca de',
+    blog: 'Blog',
+    contact: 'Contacto',
+    
+    // Hero Section
+    heroTitle: 'Entrega de Archivos Ultra Rápida',
+    heroSubtitle: 'Para Aplicaciones Modernas',
+    heroDescription: 'Optimiza, transforma y entrega archivos a escala con nuestro CDN inteligente. Construido para desarrolladores que exigen rendimiento.',
+    getStarted: 'Comenzar',
+    learnMore: 'Saber Más',
+    
+    // Features Section
+    featuresTitle: 'Todo lo que Necesitas para Entregar Rápido',
+    featuresSubtitle: 'Características poderosas diseñadas para hacer la entrega de archivos fácil, rápida y confiable para desarrolladores y sus usuarios.',
+    intelligentOptimization: 'Optimización Inteligente',
+    intelligentOptimizationDesc: 'Compresión automática, conversión de formato y dimensionamiento. Variantes WebP, AVIF y responsivas generadas al vuelo.',
+    globalEdgeNetwork: 'Red Global Edge',
+    globalEdgeNetworkDesc: '150+ ubicaciones edge en todo el mundo aseguran que tus archivos se entreguen desde el punto más cercano a tus usuarios.',
+    developerFriendlyAPI: 'API Amigable para Desarrolladores',
+    developerFriendlyAPIDesc: 'API simple e intuitiva con SDKs completos. Comienza en minutos, no horas de configuración.',
+    realTimeAnalytics: 'Análisis en Tiempo Real',
+    realTimeAnalyticsDesc: 'Monitorea rendimiento, rastrea uso y optimiza entrega con panel de análisis e insights detallados.',
+    securityReliability: 'Seguridad y Confiabilidad',
+    securityReliabilityDesc: 'Seguridad empresarial con SLA de 99.9% de tiempo activo. Tus archivos están protegidos y siempre disponibles.',
+    easyIntegration: 'Integración Fácil',
+    easyIntegrationDesc: 'Funciona con cualquier framework o plataforma. Reemplazo directo para almacenamiento de archivos existente sin configuración.',
+    
+    // CTA
+    ctaTitle: '¿Listo para Comenzar?',
+    ctaDescription: 'Prueba Snapbyte hoy y experimenta la diferencia que la optimización inteligente de archivos puede hacer en tu aplicación.',
+    startFreeTrial: 'Comenzar Prueba Gratuita',
+    
+    // Theme
+    lightMode: 'Modo Claro',
+    darkMode: 'Modo Oscuro',
+    
+    // Auth
+    signin: 'Iniciar Sesión',
+    
+    // Pricing Page
+    pricingTitle: 'Precios Simples y Transparentes',
+    pricingSubtitle: 'Comienza gratis y escala a medida que creces. Sin tarifas ocultas, sin sorpresas.',
+    pricingDescription: 'Precios simples y transparentes para desarrolladores y equipos. Comienza gratis y escala a medida que creces.',
+    mostPopular: 'Más Popular',
+    perMonth: '/mes',
+    perYear: '/año',
+    save: 'ahorra',
+    
+    // About Page
+    aboutTitle: 'Acerca de Snapbyte',
+    aboutDescription: 'Aprende más sobre nuestra misión de hacer la entrega de archivos rápida y simple para desarrolladores.',
+    
+    // Contact Page
+    contactTitle: 'Contáctanos',
+    contactDescription: 'Ponte en contacto con nuestro equipo. Estamos aquí para ayudarte a tener éxito.',
+    
+    // FAQ
+    faqTitle: 'Preguntas Frecuentes',
+    faqQuestion1: '¿Puedo cambiar planes en cualquier momento?',
+    faqAnswer1: 'Sí, puedes actualizar o degradar tu plan en cualquier momento. Los cambios entran en vigencia inmediatamente, y prorratearemos cualquier ajuste de facturación.',
+    faqQuestion2: '¿Qué pasa si excedo mis límites?',
+    faqAnswer2: 'Te notificaremos antes de que alcances tus límites. Para almacenamiento y ancho de banda, puedes actualizar tu plan o comprar recursos adicionales según sea necesario.',
+    faqQuestion3: '¿Ofrecen soluciones empresariales personalizadas?',
+    faqAnswer3: '¡Absolutamente! Nuestro plan Enterprise incluye configuraciones personalizadas, soporte dedicado, y puede adaptarse para cumplir requisitos específicos de cumplimiento y rendimiento.',
+    
+    // Footer & Legal
+    navigation: 'Navegación',
+    privacyPolicy: 'Política de Privacidad',
+    termsOfService: 'Términos de Servicio',
+    allRightsReserved: 'Todos los derechos reservados',
+  },
+  fr: {
+    // Navigation
+    home: 'Accueil',
+    features: 'Fonctionnalités',
+    pricing: 'Tarifs',
+    about: 'À propos',
+    blog: 'Blog',
+    contact: 'Contact',
+    
+    // Hero Section
+    heroTitle: 'Livraison de Fichiers Ultra-Rapide',
+    heroSubtitle: 'Pour Applications Modernes',
+    heroDescription: 'Optimisez, transformez et livrez des fichiers à grande échelle avec notre CDN intelligent. Conçu pour les développeurs qui exigent la performance.',
+    getStarted: 'Commencer',
+    learnMore: 'En Savoir Plus',
+    
+    // Features Section
+    featuresTitle: 'Tout ce dont Vous Avez Besoin pour Livrer Rapidement',
+    featuresSubtitle: 'Fonctionnalités puissantes conçues pour rendre la livraison de fichiers facile, rapide et fiable pour les développeurs et leurs utilisateurs.',
+    intelligentOptimization: 'Optimisation Intelligente',
+    intelligentOptimizationDesc: 'Compression automatique, conversion de format et dimensionnement. Variantes WebP, AVIF et responsives générées à la volée.',
+    globalEdgeNetwork: 'Réseau Edge Global',
+    globalEdgeNetworkDesc: '150+ emplacements edge dans le monde entier garantissent que vos fichiers sont livrés depuis le point le plus proche de vos utilisateurs.',
+    developerFriendlyAPI: 'API Conviviale pour Développeurs',
+    developerFriendlyAPIDesc: 'API simple et intuitive avec des SDKs complets. Commencez en quelques minutes, pas des heures de configuration.',
+    realTimeAnalytics: 'Analytiques en Temps Réel',
+    realTimeAnalyticsDesc: 'Surveillez les performances, suivez l\'utilisation et optimisez la livraison avec un tableau de bord d\'analytiques détaillé.',
+    securityReliability: 'Sécurité et Fiabilité',
+    securityReliabilityDesc: 'Sécurité de niveau entreprise avec SLA de 99,9% de disponibilité. Vos fichiers sont protégés et toujours disponibles.',
+    easyIntegration: 'Intégration Facile',
+    easyIntegrationDesc: 'Fonctionne avec n\'importe quel framework ou plateforme. Remplacement direct pour le stockage de fichiers existant sans configuration.',
+    
+    // CTA
+    ctaTitle: 'Prêt à Commencer?',
+    ctaDescription: 'Essayez Snapbyte aujourd\'hui et découvrez la différence que l\'optimisation intelligente de fichiers peut faire pour votre application.',
+    startFreeTrial: 'Commencer l\'Essai Gratuit',
+    
+    // Theme
+    lightMode: 'Mode Clair',
+    darkMode: 'Mode Sombre',
+    
+    // Auth
+    signin: 'Se Connecter',
+    
+    // Pricing Page
+    pricingTitle: 'Tarification Simple et Transparente',
+    pricingSubtitle: 'Commencez gratuitement et évoluez au fur et à mesure. Pas de frais cachés, pas de surprises.',
+    pricingDescription: 'Tarification simple et transparente pour les développeurs et les équipes. Commencez gratuitement et évoluez au fur et à mesure.',
+    mostPopular: 'Plus Populaire',
+    perMonth: '/mois',
+    perYear: '/an',
+    save: 'économisez',
+    
+    // About Page
+    aboutTitle: 'À Propos de Snapbyte',
+    aboutDescription: 'En savoir plus sur notre mission de rendre la livraison de fichiers rapide et simple pour les développeurs.',
+    
+    // Contact Page
+    contactTitle: 'Nous Contacter',
+    contactDescription: 'Contactez notre équipe. Nous sommes là pour vous aider à réussir.',
+    
+    // FAQ
+    faqTitle: 'Questions Fréquemment Posées',
+    faqQuestion1: 'Puis-je changer de plan à tout moment?',
+    faqAnswer1: 'Oui, vous pouvez mettre à niveau ou rétrograder votre plan à tout moment. Les changements prennent effet immédiatement, et nous calculerons au prorata tout ajustement de facturation.',
+    faqQuestion2: 'Que se passe-t-il si je dépasse mes limites?',
+    faqAnswer2: 'Nous vous notifierons avant que vous atteigniez vos limites. Pour le stockage et la bande passante, vous pouvez soit mettre à niveau votre plan soit acheter des ressources supplémentaires selon vos besoins.',
+    faqQuestion3: 'Proposez-vous des solutions d\'entreprise personnalisées?',
+    faqAnswer3: 'Absolument! Notre plan Enterprise inclut des configurations personnalisées, un support dédié, et peut être adapté pour répondre aux exigences spécifiques de conformité et de performance.',
+    
+    // Footer & Legal
+    navigation: 'Navigation',
+    privacyPolicy: 'Politique de Confidentialité',
+    termsOfService: 'Conditions de Service',
+    allRightsReserved: 'Tous droits réservés',
+  },
+  de: {
+    // Navigation
+    home: 'Startseite',
+    features: 'Funktionen',
+    pricing: 'Preise',
+    about: 'Über uns',
+    blog: 'Blog',
+    contact: 'Kontakt',
+    
+    // Hero Section
+    heroTitle: 'Blitzschnelle Datei-Übertragung',
+    heroSubtitle: 'Für Moderne Anwendungen',
+    heroDescription: 'Optimieren, transformieren und übertragen Sie Dateien im großen Maßstab mit unserem intelligenten CDN. Entwickelt für Entwickler, die Leistung verlangen.',
+    getStarted: 'Loslegen',
+    learnMore: 'Mehr Erfahren',
+    
+    // Features Section
+    featuresTitle: 'Alles was Sie für Schnelle Übertragung Brauchen',
+    featuresSubtitle: 'Leistungsstarke Funktionen, die Datei-Übertragung mühelos, schnell und zuverlässig für Entwickler und ihre Nutzer machen.',
+    intelligentOptimization: 'Intelligente Optimierung',
+    intelligentOptimizationDesc: 'Automatische Kompression, Formatkonvertierung und Größenanpassung. WebP, AVIF und responsive Varianten werden on-the-fly generiert.',
+    globalEdgeNetwork: 'Globales Edge-Netzwerk',
+    globalEdgeNetworkDesc: '150+ Edge-Standorte weltweit stellen sicher, dass Ihre Dateien vom nächstgelegenen Punkt zu Ihren Nutzern übertragen werden.',
+    developerFriendlyAPI: 'Entwicklerfreundliche API',
+    developerFriendlyAPIDesc: 'Einfache, intuitive API mit umfassenden SDKs. In Minuten starten, nicht Stunden der Konfiguration.',
+    realTimeAnalytics: 'Echtzeit-Analytik',
+    realTimeAnalyticsDesc: 'Überwachen Sie Leistung, verfolgen Sie Nutzung und optimieren Sie Übertragung mit detailliertem Analytik-Dashboard.',
+    securityReliability: 'Sicherheit & Zuverlässigkeit',
+    securityReliabilityDesc: 'Unternehmensklasse Sicherheit mit 99,9% Verfügbarkeits-SLA. Ihre Dateien sind geschützt und immer verfügbar.',
+    easyIntegration: 'Einfache Integration',
+    easyIntegrationDesc: 'Funktioniert mit jedem Framework oder Plattform. Drop-in-Ersatz für bestehende Dateispeicherung ohne Konfiguration.',
+    
+    // CTA
+    ctaTitle: 'Bereit Loszulegen?',
+    ctaDescription: 'Probieren Sie Snapbyte heute aus und erleben Sie den Unterschied, den intelligente Datei-Optimierung für Ihre Anwendung machen kann.',
+    startFreeTrial: 'Kostenlose Testversion Starten',
+    
+    // Theme
+    lightMode: 'Heller Modus',
+    darkMode: 'Dunkler Modus',
+    
+    // Auth
+    signin: 'Anmelden',
+    
+    // Pricing Page
+    pricingTitle: 'Einfache, Transparente Preise',
+    pricingSubtitle: 'Kostenlos starten und skalieren Sie mit dem Wachstum. Keine versteckten Gebühren, keine Überraschungen.',
+    pricingDescription: 'Einfache, transparente Preise für Entwickler und Teams. Kostenlos starten und skalieren Sie mit dem Wachstum.',
+    mostPopular: 'Beliebteste',
+    perMonth: '/Monat',
+    perYear: '/Jahr',
+    save: 'sparen',
+    
+    // About Page
+    aboutTitle: 'Über Snapbyte',
+    aboutDescription: 'Erfahren Sie mehr über unsere Mission, die Dateiübertragung für Entwickler schnell und einfach zu machen.',
+    
+    // Contact Page
+    contactTitle: 'Kontakt',
+    contactDescription: 'Kontaktieren Sie unser Team. Wir sind hier, um Ihnen zum Erfolg zu verhelfen.',
+    
+    // FAQ
+    faqTitle: 'Häufig Gestellte Fragen',
+    faqQuestion1: 'Kann ich jederzeit den Plan wechseln?',
+    faqAnswer1: 'Ja, Sie können Ihren Plan jederzeit aktualisieren oder herabstufen. Änderungen werden sofort wirksam, und wir werden alle Abrechnungsanpassungen anteilig berechnen.',
+    faqQuestion2: 'Was passiert, wenn ich meine Limits überschreite?',
+    faqAnswer2: 'Wir benachrichtigen Sie, bevor Sie Ihre Limits erreichen. Für Speicher und Bandbreite können Sie entweder Ihren Plan aktualisieren oder zusätzliche Ressourcen nach Bedarf kaufen.',
+    faqQuestion3: 'Bieten Sie maßgeschneiderte Unternehmenslösungen an?',
+    faqAnswer3: 'Absolut! Unser Enterprise-Plan umfasst benutzerdefinierte Konfigurationen, dedizierten Support und kann an spezifische Compliance- und Leistungsanforderungen angepasst werden.',
+    
+    // Footer & Legal
+    navigation: 'Navigation',
+    privacyPolicy: 'Datenschutzrichtlinie',
+    termsOfService: 'Nutzungsbedingungen',
+    allRightsReserved: 'Alle Rechte vorbehalten',
+  },
+  ja: {
+    // Navigation
+    home: 'ホーム',
+    features: '機能',
+    pricing: '料金',
+    about: '会社概要',
+    blog: 'ブログ',
+    contact: 'お問い合わせ',
+    
+    // Hero Section
+    heroTitle: '超高速ファイル配信',
+    heroSubtitle: 'モダンアプリケーション向け',
+    heroDescription: 'インテリジェントCDNでファイルを大規模に最適化、変換、配信。パフォーマンスを求める開発者のために構築。',
+    getStarted: '始める',
+    learnMore: '詳細を見る',
+    
+    // Features Section
+    featuresTitle: '高速配信に必要なすべて',
+    featuresSubtitle: '開発者とそのユーザーにとってファイル配信を簡単、高速、信頼性の高いものにする強力な機能。',
+    intelligentOptimization: 'インテリジェント最適化',
+    intelligentOptimizationDesc: '自動圧縮、フォーマット変換、サイズ調整。WebP、AVIF、レスポンシブバリアントをオンザフライで生成。',
+    globalEdgeNetwork: 'グローバルエッジネットワーク',
+    globalEdgeNetworkDesc: '世界150+のエッジロケーションにより、ユーザーに最も近いポイントからファイルを配信し、最大速度を実現。',
+    developerFriendlyAPI: '開発者向けAPI',
+    developerFriendlyAPIDesc: '包括的なSDKを備えたシンプルで直感的なAPI。設定に何時間もかけることなく、数分で開始。',
+    realTimeAnalytics: 'リアルタイム分析',
+    realTimeAnalyticsDesc: '詳細な分析とインサイトダッシュボードでパフォーマンスを監視し、使用状況を追跡し、配信を最適化。',
+    securityReliability: 'セキュリティと信頼性',
+    securityReliabilityDesc: '99.9%稼働時間SLAのエンタープライズグレードセキュリティ。ファイルは保護され、常に利用可能。',
+    easyIntegration: '簡単な統合',
+    easyIntegrationDesc: 'あらゆるフレームワークやプラットフォームで動作。既存ファイルストレージの設定なしのドロップイン置換。',
+    
+    // CTA
+    ctaTitle: '始める準備はできましたか？',
+    ctaDescription: 'Snapbyteを今日試して、インテリジェントファイル最適化があなたのアプリケーションにもたらす違いを体験してください。',
+    startFreeTrial: '無料トライアル開始',
+    
+    // Theme
+    lightMode: 'ライトモード',
+    darkMode: 'ダークモード',
+    
+    // Auth
+    signin: 'サインイン',
+    
+    // Pricing Page
+    pricingTitle: 'シンプルで透明な価格設定',
+    pricingSubtitle: '無料で始めて、成長に合わせてスケール。隠れた料金や驚きはありません。',
+    pricingDescription: '開発者とチーム向けのシンプルで透明な価格設定。無料で始めて、成長に合わせてスケール。',
+    mostPopular: '最も人気',
+    perMonth: '/月',
+    perYear: '/年',
+    save: '節約',
+    
+    // About Page
+    aboutTitle: 'Snapbyteについて',
+    aboutDescription: '開発者向けのファイル配信を高速かつシンプルにするという私たちのミッションについて詳しく学んでください。',
+    
+    // Contact Page
+    contactTitle: 'お問い合わせ',
+    contactDescription: '私たちのチームにお気軽にお問い合わせください。お客様の成功をサポートいたします。',
+    
+    // FAQ
+    faqTitle: 'よくある質問',
+    faqQuestion1: 'プランはいつでも変更できますか？',
+    faqAnswer1: 'はい、いつでもプランをアップグレードまたはダウングレードできます。変更は即座に有効になり、請求調整は日割り計算されます。',
+    faqQuestion2: '制限を超えた場合はどうなりますか？',
+    faqAnswer2: '制限に達する前に通知いたします。ストレージと帯域幅については、プランをアップグレードするか、必要に応じて追加リソースを購入できます。',
+    faqQuestion3: 'カスタムエンタープライズソリューションは提供していますか？',
+    faqAnswer3: 'もちろんです！Enterpriseプランには、カスタム設定、専用サポートが含まれ、特定のコンプライアンスとパフォーマンス要件に合わせて調整できます。',
+    
+    // Footer & Legal
+    navigation: 'ナビゲーション',
+    privacyPolicy: 'プライバシーポリシー',
+    termsOfService: '利用規約',
+    allRightsReserved: '全著作権所有',
+  },
+  zh: {
+    // Navigation
+    home: '首页',
+    features: '功能',
+    pricing: '定价',
+    about: '关于我们',
+    blog: '博客',
+    contact: '联系我们',
+    
+    // Hero Section
+    heroTitle: '闪电般的文件传输',
+    heroSubtitle: '为现代应用而生',
+    heroDescription: '使用我们的智能CDN大规模优化、转换和传输文件。专为追求性能的开发者打造。',
+    getStarted: '开始使用',
+    learnMore: '了解更多',
+    
+    // Features Section
+    featuresTitle: '快速传输所需的一切',
+    featuresSubtitle: '强大的功能，旨在为开发者及其用户提供轻松、快速、可靠的文件传输。',
+    intelligentOptimization: '智能优化',
+    intelligentOptimizationDesc: '自动压缩、格式转换和尺寸调整。实时生成WebP、AVIF和响应式变体。',
+    globalEdgeNetwork: '全球边缘网络',
+    globalEdgeNetworkDesc: '全球150+边缘位置确保从离用户最近的点传输文件，实现最大速度。',
+    developerFriendlyAPI: '开发者友好的API',
+    developerFriendlyAPIDesc: '简单直观的API，配备全面的SDK。几分钟内开始，无需数小时配置。',
+    realTimeAnalytics: '实时分析',
+    realTimeAnalyticsDesc: '通过详细的分析和洞察仪表板监控性能、跟踪使用情况和优化传输。',
+    securityReliability: '安全性和可靠性',
+    securityReliabilityDesc: '企业级安全性，99.9%正常运行时间SLA。您的文件受到保护且始终可用。',
+    easyIntegration: '轻松集成',
+    easyIntegrationDesc: '适用于任何框架或平台。现有文件存储的即插即用替代品，无需配置。',
+    
+    // CTA
+    ctaTitle: '准备开始了吗？',
+    ctaDescription: '今天就试用Snapbyte，体验智能文件优化为您的应用程序带来的不同。',
+    startFreeTrial: '开始免费试用',
+    
+    // Theme
+    lightMode: '浅色模式',
+    darkMode: '深色模式',
+    
+    // Auth
+    signin: '登录',
+    
+    // Pricing Page
+    pricingTitle: '简单透明的定价',
+    pricingSubtitle: '免费开始，随着增长而扩展。没有隐藏费用，没有意外。',
+    pricingDescription: '为开发者和团队提供简单透明的定价。免费开始，随着增长而扩展。',
+    mostPopular: '最受欢迎',
+    perMonth: '/月',
+    perYear: '/年',
+    save: '节省',
+    
+    // About Page
+    aboutTitle: '关于Snapbyte',
+    aboutDescription: '了解更多关于我们让开发者文件传输快速简单的使命。',
+    
+    // Contact Page
+    contactTitle: '联系我们',
+    contactDescription: '与我们的团队取得联系。我们在这里帮助您成功。',
+    
+    // FAQ
+    faqTitle: '常见问题',
+    faqQuestion1: '我可以随时更改计划吗？',
+    faqAnswer1: '是的，您可以随时升级或降级您的计划。更改立即生效，我们将按比例调整任何计费调整。',
+    faqQuestion2: '如果我超过限制会发生什么？',
+    faqAnswer2: '我们会在您达到限制之前通知您。对于存储和带宽，您可以升级您的计划或根据需要购买额外资源。',
+    faqQuestion3: '你们提供定制的企业解决方案吗？',
+    faqAnswer3: '当然！我们的企业计划包括自定义配置、专用支持，并可以根据特定的合规性和性能要求进行定制。',
+    
+    // Footer & Legal
+    navigation: '导航',
+    privacyPolicy: '隐私政策',
+    termsOfService: '服务条款',
+    allRightsReserved: '版权所有',
+  },
+};
+
+export function getTranslation(language: string): Translation {
+  return translations[language] || translations.en;
+}
