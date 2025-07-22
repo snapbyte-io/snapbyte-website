@@ -30,10 +30,10 @@ export interface Translation {
   globalEdgeNetworkDesc: string;
   developerFriendlyAPI: string;
   developerFriendlyAPIDesc: string;
-  realTimeAnalytics: string;
-  realTimeAnalyticsDesc: string;
-  securityReliability: string;
-  securityReliabilityDesc: string;
+  lowBandwidthCosts: string;
+  lowBandwidthCostsDesc: string;
+  twentyFourSevenSupport: string;
+  twentyFourSevenSupportDesc: string;
   easyIntegration: string;
   easyIntegrationDesc: string;
   
@@ -165,6 +165,7 @@ export const languages: Language[] = [
   { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
   { code: 'ja', name: '日本語', flag: '🇯🇵' },
   { code: 'zh', name: '中文', flag: '🇨🇳' },
+  { code: 'vi', name: 'Tiếng Việt', flag: '🇻🇳' },
 ];
 
 export const translations: Record<string, Translation> = {
@@ -178,8 +179,8 @@ export const translations: Record<string, Translation> = {
     contact: 'Contact',
     
     // Hero Section
-    heroTitle: 'Lightning-Fast File Delivery',
-    heroSubtitle: 'For Modern Applications',
+    heroTitle: 'Snapbyte.',
+    heroSubtitle: 'File & Object Caching System.',
     heroDescription: 'Optimize, transform, and deliver files at scale with our intelligent CDN. Built for developers who demand performance.',
     getStarted: 'Get Started',
     learnMore: 'Learn More',
@@ -194,10 +195,10 @@ export const translations: Record<string, Translation> = {
     globalEdgeNetworkDesc: '150+ edge locations worldwide ensure your files are delivered from the closest point to your users for maximum speed.',
     developerFriendlyAPI: 'Developer-Friendly API',
     developerFriendlyAPIDesc: 'Simple, intuitive API with comprehensive SDKs. Get started in minutes, not hours of configuration.',
-    realTimeAnalytics: 'Real-time Analytics',
-    realTimeAnalyticsDesc: 'Monitor performance, track usage, and optimize delivery with detailed analytics and insights dashboard.',
-    securityReliability: 'Security & Reliability',
-    securityReliabilityDesc: 'Enterprise-grade security with 99.9% uptime SLA. Your files are protected and always available.',
+    lowBandwidthCosts: 'Low Bandwidth Costs, No Storage Costs',
+    lowBandwidthCostsDesc: 'No hidden fees, no storage limits — just fast, efficient delivery at the best bandwidth rates in the market.',
+    twentyFourSevenSupport: '24/7 Support',
+    twentyFourSevenSupportDesc: 'And whenever you need help, our 24/7 support team is here to assist you — anytime, anywhere.',
     easyIntegration: 'Easy Integration',
     easyIntegrationDesc: 'Works with any framework or platform. Drop-in replacement for existing file storage with zero configuration.',
     
@@ -347,10 +348,10 @@ export const translations: Record<string, Translation> = {
     globalEdgeNetworkDesc: '150+ ubicaciones edge en todo el mundo aseguran que tus archivos se entreguen desde el punto más cercano a tus usuarios.',
     developerFriendlyAPI: 'API Amigable para Desarrolladores',
     developerFriendlyAPIDesc: 'API simple e intuitiva con SDKs completos. Comienza en minutos, no horas de configuración.',
-    realTimeAnalytics: 'Análisis en Tiempo Real',
-    realTimeAnalyticsDesc: 'Monitorea rendimiento, rastrea uso y optimiza entrega con panel de análisis e insights detallados.',
-    securityReliability: 'Seguridad y Confiabilidad',
-    securityReliabilityDesc: 'Seguridad empresarial con SLA de 99.9% de tiempo activo. Tus archivos están protegidos y siempre disponibles.',
+    lowBandwidthCosts: 'Costos Bajos de Ancho de Banda, Sin Costos de Almacenamiento',
+    lowBandwidthCostsDesc: 'Sin tarifas ocultas, sin límites de almacenamiento — solo entrega rápida y eficiente a las mejores tarifas de ancho de banda del mercado.',
+    twentyFourSevenSupport: 'Soporte 24/7',
+    twentyFourSevenSupportDesc: 'Y cuando necesites ayuda, nuestro equipo de soporte 24/7 está aquí para asistirte — en cualquier momento, en cualquier lugar.',
     easyIntegration: 'Integración Fácil',
     easyIntegrationDesc: 'Funciona con cualquier framework o plataforma. Reemplazo directo para almacenamiento de archivos existente sin configuración.',
     
@@ -500,10 +501,10 @@ export const translations: Record<string, Translation> = {
     globalEdgeNetworkDesc: '150+ emplacements edge dans le monde entier garantissent que vos fichiers sont livrés depuis le point le plus proche de vos utilisateurs.',
     developerFriendlyAPI: 'API Conviviale pour Développeurs',
     developerFriendlyAPIDesc: 'API simple et intuitive avec des SDKs complets. Commencez en quelques minutes, pas des heures de configuration.',
-    realTimeAnalytics: 'Analytiques en Temps Réel',
-    realTimeAnalyticsDesc: 'Surveillez les performances, suivez l\'utilisation et optimisez la livraison avec un tableau de bord d\'analytiques détaillé.',
-    securityReliability: 'Sécurité et Fiabilité',
-    securityReliabilityDesc: 'Sécurité de niveau entreprise avec SLA de 99,9% de disponibilité. Vos fichiers sont protégés et toujours disponibles.',
+    lowBandwidthCosts: 'Coûts de Bande Passante Faibles, Aucun Coût de Stockage',
+    lowBandwidthCostsDesc: 'Aucuns frais cachés, aucune limite de stockage — juste une livraison rapide et efficace aux meilleurs tarifs de bande passante du marché.',
+    twentyFourSevenSupport: 'Support 24/7',
+    twentyFourSevenSupportDesc: 'Et quand vous avez besoin d\'aide, notre équipe de support 24/7 est là pour vous assister — à tout moment, n\'importe où.',
     easyIntegration: 'Intégration Facile',
     easyIntegrationDesc: 'Fonctionne avec n\'importe quel framework ou plateforme. Remplacement direct pour le stockage de fichiers existant sans configuration.',
     
@@ -653,10 +654,10 @@ export const translations: Record<string, Translation> = {
     globalEdgeNetworkDesc: '150+ Edge-Standorte weltweit stellen sicher, dass Ihre Dateien vom nächstgelegenen Punkt zu Ihren Nutzern übertragen werden.',
     developerFriendlyAPI: 'Entwicklerfreundliche API',
     developerFriendlyAPIDesc: 'Einfache, intuitive API mit umfassenden SDKs. In Minuten starten, nicht Stunden der Konfiguration.',
-    realTimeAnalytics: 'Echtzeit-Analytik',
-    realTimeAnalyticsDesc: 'Überwachen Sie Leistung, verfolgen Sie Nutzung und optimieren Sie Übertragung mit detailliertem Analytik-Dashboard.',
-    securityReliability: 'Sicherheit & Zuverlässigkeit',
-    securityReliabilityDesc: 'Unternehmensklasse Sicherheit mit 99,9% Verfügbarkeits-SLA. Ihre Dateien sind geschützt und immer verfügbar.',
+    lowBandwidthCosts: 'Niedrige Bandbreitenkosten, Keine Speicherkosten',
+    lowBandwidthCostsDesc: 'Keine versteckten Gebühren, keine Speicherlimits — nur schnelle, effiziente Bereitstellung zu den besten Bandbreitentarifen am Markt.',
+    twentyFourSevenSupport: '24/7 Support',
+    twentyFourSevenSupportDesc: 'Und wann immer Sie Hilfe benötigen, ist unser 24/7-Support-Team da, um Sie zu unterstützen — jederzeit, überall.',
     easyIntegration: 'Einfache Integration',
     easyIntegrationDesc: 'Funktioniert mit jedem Framework oder Plattform. Drop-in-Ersatz für bestehende Dateispeicherung ohne Konfiguration.',
     
@@ -806,10 +807,10 @@ export const translations: Record<string, Translation> = {
     globalEdgeNetworkDesc: '世界150+のエッジロケーションにより、ユーザーに最も近いポイントからファイルを配信し、最大速度を実現。',
     developerFriendlyAPI: '開発者向けAPI',
     developerFriendlyAPIDesc: '包括的なSDKを備えたシンプルで直感的なAPI。設定に何時間もかけることなく、数分で開始。',
-    realTimeAnalytics: 'リアルタイム分析',
-    realTimeAnalyticsDesc: '詳細な分析とインサイトダッシュボードでパフォーマンスを監視し、使用状況を追跡し、配信を最適化。',
-    securityReliability: 'セキュリティと信頼性',
-    securityReliabilityDesc: '99.9%稼働時間SLAのエンタープライズグレードセキュリティ。ファイルは保護され、常に利用可能。',
+    lowBandwidthCosts: '低帯域幅コスト、ストレージコストなし',
+    lowBandwidthCostsDesc: '隠れた料金なし、ストレージ制限なし — 市場で最高の帯域幅料金で迅速かつ効率的な配信のみ。',
+    twentyFourSevenSupport: '24/7サポート',
+    twentyFourSevenSupportDesc: 'ヘルプが必要なときはいつでも、24/7サポートチームがお手伝いします — いつでも、どこでも。',
     easyIntegration: '簡単な統合',
     easyIntegrationDesc: 'あらゆるフレームワークやプラットフォームで動作。既存ファイルストレージの設定なしのドロップイン置換。',
     
@@ -959,10 +960,10 @@ export const translations: Record<string, Translation> = {
     globalEdgeNetworkDesc: '全球150+边缘位置确保从离用户最近的点传输文件，实现最大速度。',
     developerFriendlyAPI: '开发者友好的API',
     developerFriendlyAPIDesc: '简单直观的API，配备全面的SDK。几分钟内开始，无需数小时配置。',
-    realTimeAnalytics: '实时分析',
-    realTimeAnalyticsDesc: '通过详细的分析和洞察仪表板监控性能、跟踪使用情况和优化传输。',
-    securityReliability: '安全性和可靠性',
-    securityReliabilityDesc: '企业级安全性，99.9%正常运行时间SLA。您的文件受到保护且始终可用。',
+    lowBandwidthCosts: '低带宽成本，无存储成本',
+    lowBandwidthCostsDesc: '无隐藏费用，无存储限制 — 仅以市场上最优带宽费率提供快速高效的传输。',
+    twentyFourSevenSupport: '24/7支持',
+    twentyFourSevenSupportDesc: '无论何时您需要帮助，我们的24/7支持团队都在这里为您提供协助 — 随时随地。',
     easyIntegration: '轻松集成',
     easyIntegrationDesc: '适用于任何框架或平台。现有文件存储的即插即用替代品，无需配置。',
     
@@ -1086,6 +1087,159 @@ export const translations: Record<string, Translation> = {
     bandwidthFeature2: '取决于使用量、地区和交付模式',
     bandwidthFeature3: '联系我们获取个性化定价',
   },
+  vi: {
+    // Navigation
+    home: 'Trang chủ',
+    features: 'Tính năng',
+    pricing: 'Bảng giá',
+    about: 'Về chúng tôi',
+    blog: 'Blog',
+    contact: 'Liên hệ',
+    
+    // Hero Section
+    heroTitle: 'Snapbyte.',
+    heroSubtitle: 'Hệ thống Lưu trữ đệm Tệp & Đối tượng.',
+    heroDescription: 'Tối ưu hóa, chuyển đổi và phân phối tệp ở quy mô lớn với CDN thông minh của chúng tôi. Dành cho các nhà phát triển yêu cầu hiệu suất cao.',
+    getStarted: 'Bắt đầu',
+    learnMore: 'Tìm hiểu thêm',
+    seeHowItWorks: 'Xem cách hoạt động',
+    
+    // Features Section
+    featuresTitle: 'Mọi thứ bạn cần để phân phối nhanh chóng',
+    featuresSubtitle: 'Các tính năng mạnh mẽ được thiết kế để giúp việc phân phối tệp trở nên dễ dàng, nhanh chóng và đáng tin cậy cho các nhà phát triển và người dùng của họ.',
+    intelligentOptimization: 'Tối ưu hóa thông minh',
+    intelligentOptimizationDesc: 'Tự động nén, chuyển đổi định dạng và thay đổi kích thước. Các biến thể WebP, AVIF và responsive được tạo ra tức thì.',
+    globalEdgeNetwork: 'Mạng lưới biên toàn cầu',
+    globalEdgeNetworkDesc: 'Hơn 150 vị trí biên trên toàn thế giới đảm bảo các tệp của bạn được phân phối từ điểm gần nhất đến người dùng để đạt tốc độ tối đa.',
+    developerFriendlyAPI: 'API thân thiện với nhà phát triển',
+    developerFriendlyAPIDesc: 'API đơn giản, trực quan với các SDK toàn diện. Bắt đầu trong vài phút, không mất hàng giờ cấu hình.',
+    lowBandwidthCosts: 'Chi phí băng thông thấp, không tốn phí lưu trữ',
+    lowBandwidthCostsDesc: 'Không có phí ẩn, không giới hạn dung lượng lưu trữ — chỉ có phân phối nhanh chóng, hiệu quả với mức giá băng thông tốt nhất trên thị trường.',
+    twentyFourSevenSupport: 'Hỗ trợ 24/7',
+    twentyFourSevenSupportDesc: 'Và bất cứ khi nào bạn cần giúp đỡ, đội ngũ hỗ trợ 24/7 của chúng tôi luôn sẵn sàng hỗ trợ bạn — mọi lúc, mọi nơi.',
+    easyIntegration: 'Tích hợp dễ dàng',
+    easyIntegrationDesc: 'Hoạt động với mọi framework hoặc nền tảng. Thay thế thả vào cho bộ nhớ tệp hiện có mà không cần cấu hình.',
+    
+    // CTA
+    ctaTitle: 'Sẵn sàng để bắt đầu?',
+    ctaDescription: 'Hãy dùng thử Snapbyte ngay hôm nay và trải nghiệm sự khác biệt mà việc tối ưu hóa tệp thông minh có thể mang lại cho ứng dụng của bạn.',
+    startFreeTrial: 'Bắt đầu dùng thử miễn phí',
+    
+    // Theme
+    lightMode: 'Chế độ Sáng',
+    darkMode: 'Chế độ Tối',
+    
+    // Auth
+    signin: 'Đăng nhập',
+    
+    // Pricing Page
+    pricingTitle: 'Bảng giá đơn giản, minh bạch',
+    pricingSubtitle: 'Bắt đầu miễn phí và mở rộng quy mô khi bạn phát triển. Không có phí ẩn, không có bất ngờ.',
+    pricingDescription: 'Bảng giá đơn giản, minh bạch cho các nhà phát triển và đội nhóm. Bắt đầu miễn phí và mở rộng quy mô khi bạn phát triển.',
+    mostPopular: 'Phổ biến nhất',
+    perMonth: '/tháng',
+    perYear: '/năm',
+    save: 'tiết kiệm',
+    
+    // About Page
+    aboutTitle: 'Về Snapbyte',
+    aboutDescription: 'Tìm hiểu thêm về sứ mệnh của chúng tôi là giúp việc phân phối tệp nhanh chóng và đơn giản cho các nhà phát triển.',
+    
+    // Contact Page
+    contactTitle: 'Liên hệ với chúng tôi',
+    contactDescription: 'Hãy liên hệ với đội ngũ của chúng tôi. Chúng tôi ở đây để giúp bạn thành công.',
+    contactInformation: 'Thông tin liên hệ',
+    generalInquiries: 'Yêu cầu chung',
+    generalInquiriesDesc: 'Các câu hỏi về Snapbyte hoặc thông tin chung',
+    technicalSupport: 'Hỗ trợ kỹ thuật',
+    technicalSupportDesc: 'Cần trợ giúp về tích hợp hoặc khắc phục sự cố?',
+    salesEnterprise: 'Kinh doanh & Doanh nghiệp',
+    salesEnterpriseDesc: 'Quan tâm đến các giải pháp cho doanh nghiệp hoặc có câu hỏi về giá cả?',
+    phoneSupport: 'Hỗ trợ qua điện thoại',
+    phoneSupportDesc: 'Thích trò chuyện? Hãy gọi cho chúng tôi',
+    ourOffice: 'Văn phòng của chúng tôi',
+    sendMessage: 'Gửi tin nhắn cho chúng tôi',
+    nameLabel: 'Họ và tên',
+    emailLabel: 'Email',
+    companyLabel: 'Công ty',
+    subjectLabel: 'Chủ đề',
+    messageLabel: 'Nội dung',
+    selectSubject: 'Chọn một chủ đề',
+    generalInquiry: 'Yêu cầu chung',
+    technicalSupportOption: 'Hỗ trợ kỹ thuật',
+    salesPricing: 'Kinh doanh & Bảng giá',
+    enterpriseSolutions: 'Giải pháp doanh nghiệp',
+    partnershipOpportunities: 'Cơ hội hợp tác',
+    namePlaceholder: 'Họ và tên đầy đủ của bạn',
+    emailPlaceholder: 'email@cuaban.com',
+    companyPlaceholder: 'Tên công ty của bạn',
+    messagePlaceholder: 'Hãy cho chúng tôi biết chúng tôi có thể giúp bạn như thế nào...',
+    sendMessageButton: 'Gửi tin nhắn',
+    messageSuccess: 'Cảm ơn bạn! Tin nhắn của bạn đã được gửi thành công.',
+    messageError: 'Xin lỗi, đã có lỗi xảy ra khi gửi tin nhắn của bạn. Vui lòng thử lại.',
+    sending: 'Đang gửi...',
+    
+    // FAQ
+    faqTitle: 'Các câu hỏi thường gặp',
+    faqQuestion1: 'Tôi có thể thay đổi gói bất cứ lúc nào không?',
+    faqAnswer1: 'Có, bạn có thể nâng cấp hoặc hạ cấp gói của mình bất cứ lúc nào. Các thay đổi có hiệu lực ngay lập tức và chúng tôi sẽ tính toán lại mọi điều chỉnh thanh toán theo tỷ lệ.',
+    faqQuestion2: 'Điều gì xảy ra nếu tôi vượt quá giới hạn của mình?',
+    faqAnswer2: 'Chúng tôi sẽ thông báo cho bạn trước khi bạn đạt đến giới hạn. Đối với dung lượng lưu trữ và băng thông, bạn có thể nâng cấp gói của mình hoặc mua thêm tài nguyên khi cần.',
+    faqQuestion3: 'Bạn có cung cấp các giải pháp doanh nghiệp tùy chỉnh không?',
+    faqAnswer3: 'Chắc chắn rồi! Gói Doanh nghiệp của chúng tôi bao gồm các cấu hình tùy chỉnh, hỗ trợ chuyên biệt và có thể được điều chỉnh để đáp ứng các yêu cầu cụ thể về tuân thủ và hiệu suất.',
+    
+    // Footer & Legal
+    navigation: 'Điều hướng',
+    privacyPolicy: 'Chính sách bảo mật',
+    termsOfService: 'Điều khoản dịch vụ',
+    allRightsReserved: 'Bảo lưu mọi quyền',
+    
+    // Pricing Plans
+    trialPlan: 'Gói Dùng thử',
+    trialDescription: 'Hoàn hảo để thử nghiệm khả năng lưu trữ đệm của Snapbyte',
+    trialCacheLifetime: 'Tệp được lưu vào bộ nhớ đệm lên đến 7 ngày',
+    trialAutoExtension: 'Không tự động gia hạn',
+    trialBandwidth: 'Băng thông: 10 TB',
+    
+    proPlan: 'Gói Pro',
+    proDescription: 'Lý tưởng cho nội dung có lưu lượng truy cập cao hoặc nhạy cảm về thời gian',
+    proCacheLifetime: 'Tệp được lưu vào bộ nhớ đệm lên đến 30 ngày',
+    proAutoExtension: 'Tự động gia hạn: Nếu một tệp được truy cập thường xuyên, thời gian tồn tại trong bộ đệm của nó sẽ được tự động gia hạn',
+    
+    enterprisePlan: 'Gói Doanh nghiệp',
+    enterpriseDescription: 'Tốt nhất cho các tài sản quan trọng yêu cầu tính sẵn sàng dài hạn',
+    enterpriseCacheLifetime: 'Tệp được lưu vào bộ nhớ đệm vô thời hạn',
+    enterpriseAutoExtension: 'Đảm bảo lưu trữ đệm liên tục',
+    enterpriseStorageFees: 'Phí lưu trữ: $7 mỗi TB mỗi tháng',
+    enterpriseNote: '⚠️ Lưu ý: Mặc dù các tệp được lưu vào bộ nhớ đệm vĩnh viễn, Snapbyte là một hệ thống lưu trữ đệm dữ liệu — không nên sử dụng nó làm nơi lưu trữ chính hoặc lâu dài.',
+    
+    noStorageFees: 'Không có phí lưu trữ',
+    contactSales: 'Liên hệ bộ phận kinh doanh',
+    getStartedFree: 'Bắt đầu miễn phí',
+    
+    // Pricing Features
+    trialFeature1: 'Thời gian lưu trữ đệm 7 ngày',
+    trialFeature2: 'Bao gồm 10 TB băng thông',
+    trialFeature3: 'Phân tích cơ bản',
+    trialFeature4: 'Hỗ trợ cộng đồng',
+    
+    proFeature1: 'Thời gian lưu trữ đệm 30 ngày',
+    proFeature2: 'Tự động gia hạn thông minh',
+    proFeature3: 'Phân tích nâng cao',
+    proFeature4: 'Hỗ trợ ưu tiên',
+    
+    enterpriseFeature1: 'Thời gian lưu trữ đệm vô thời hạn',
+    enterpriseFeature2: 'Đảm bảo lưu trữ đệm liên tục',
+    enterpriseFeature3: 'Phân tích cao cấp',
+    enterpriseFeature4: 'Hỗ trợ chuyên biệt 24/7',
+    
+    // Bandwidth Pricing
+    bandwidthPricing: '🌐 Bảng giá băng thông',
+    bandwidthDescription: 'Chúng tôi tính phí dựa trên băng thông được phân phối từ bộ nhớ đệm của Snapbyte đến người dùng của bạn.',
+    bandwidthFeature1: 'Giá băng thông được tùy chỉnh cho mỗi khách hàng',
+    bandwidthFeature2: 'Phụ thuộc vào khối lượng sử dụng, khu vực và mô hình phân phối',
+    bandwidthFeature3: 'Liên hệ với chúng tôi để nhận báo giá cá nhân hóa'
+  }
 };
 
 export function getTranslation(language: string): Translation {

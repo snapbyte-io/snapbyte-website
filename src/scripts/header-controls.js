@@ -38,6 +38,7 @@ function createLanguageSelector() {
     { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
     { code: 'ja', name: '日本語', flag: '🇯🇵' },
     { code: 'zh', name: '中文', flag: '🇨🇳' },
+    { code: 'vi', name: 'Tiếng Việt', flag: '🇻🇳' }
   ];
   
   const containers = ['header-controls', 'mobile-header-controls'];

@@ -1,13 +1,13 @@
 export const contactInfo = {
   email: "business@snapbyte.io",
   support: "business@snapbyte.io",
-  sales: "sales@snapbyte.io",
-  phone: "+1 (555) 123-4567",
+  sales: "business@snapbyte.io",
+  phone: "",
   address: {
-    street: "123 Tech Street",
+    street: "",
     city: "Cam Le",
     state: "Da Nang",
-    zip: "94105",
+    zip: "550000",
     country: "Vietnam"
   },
   hours: {
