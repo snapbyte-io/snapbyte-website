@@ -65,6 +65,36 @@ export interface Translation {
   // Contact Page
   contactTitle: string;
   contactDescription: string;
+  contactInformation: string;
+  generalInquiries: string;
+  generalInquiriesDesc: string;
+  technicalSupport: string;
+  technicalSupportDesc: string;
+  salesEnterprise: string;
+  salesEnterpriseDesc: string;
+  phoneSupport: string;
+  phoneSupportDesc: string;
+  ourOffice: string;
+  sendMessage: string;
+  nameLabel: string;
+  emailLabel: string;
+  companyLabel: string;
+  subjectLabel: string;
+  messageLabel: string;
+  selectSubject: string;
+  generalInquiry: string;
+  technicalSupportOption: string;
+  salesPricing: string;
+  enterpriseSolutions: string;
+  partnershipOpportunities: string;
+  namePlaceholder: string;
+  emailPlaceholder: string;
+  companyPlaceholder: string;
+  messagePlaceholder: string;
+  sendMessageButton: string;
+  messageSuccess: string;
+  messageError: string;
+  sending: string;
   
   // FAQ
   faqTitle: string;
@@ -199,6 +229,36 @@ export const translations: Record<string, Translation> = {
     // Contact Page
     contactTitle: 'Contact Us',
     contactDescription: 'Get in touch with our team. We\'re here to help you succeed.',
+    contactInformation: 'Contact Information',
+    generalInquiries: 'General Inquiries',
+    generalInquiriesDesc: 'Questions about Snapbyte or general information',
+    technicalSupport: 'Technical Support',
+    technicalSupportDesc: 'Need help with integration or troubleshooting?',
+    salesEnterprise: 'Sales & Enterprise',
+    salesEnterpriseDesc: 'Interested in enterprise solutions or have questions about pricing?',
+    phoneSupport: 'Phone Support',
+    phoneSupportDesc: 'Prefer to talk? Give us a call',
+    ourOffice: 'Our Office',
+    sendMessage: 'Send Us a Message',
+    nameLabel: 'Name',
+    emailLabel: 'Email',
+    companyLabel: 'Company',
+    subjectLabel: 'Subject',
+    messageLabel: 'Message',
+    selectSubject: 'Select a subject',
+    generalInquiry: 'General Inquiry',
+    technicalSupportOption: 'Technical Support',
+    salesPricing: 'Sales & Pricing',
+    enterpriseSolutions: 'Enterprise Solutions',
+    partnershipOpportunities: 'Partnership Opportunities',
+    namePlaceholder: 'Your full name',
+    emailPlaceholder: 'your@email.com',
+    companyPlaceholder: 'Your company name',
+    messagePlaceholder: 'Tell us how we can help you...',
+    sendMessageButton: 'Send Message',
+    messageSuccess: 'Thank you! Your message has been sent successfully.',
+    messageError: 'Sorry, there was an error sending your message. Please try again.',
+    sending: 'Sending...',
     
     // FAQ
     faqTitle: 'Frequently Asked Questions',
@@ -322,6 +382,36 @@ export const translations: Record<string, Translation> = {
     // Contact Page
     contactTitle: 'Contáctanos',
     contactDescription: 'Ponte en contacto con nuestro equipo. Estamos aquí para ayudarte a tener éxito.',
+    contactInformation: 'Información de Contacto',
+    generalInquiries: 'Consultas Generales',
+    generalInquiriesDesc: 'Preguntas sobre Snapbyte o información general',
+    technicalSupport: 'Soporte Técnico',
+    technicalSupportDesc: '¿Necesitas ayuda con integración o solución de problemas?',
+    salesEnterprise: 'Ventas y Empresa',
+    salesEnterpriseDesc: '¿Interesado en soluciones empresariales o tienes preguntas sobre precios?',
+    phoneSupport: 'Soporte Telefónico',
+    phoneSupportDesc: '¿Prefieres hablar? Llámanos',
+    ourOffice: 'Nuestra Oficina',
+    sendMessage: 'Envíanos un Mensaje',
+    nameLabel: 'Nombre',
+    emailLabel: 'Correo',
+    companyLabel: 'Empresa',
+    subjectLabel: 'Asunto',
+    messageLabel: 'Mensaje',
+    selectSubject: 'Selecciona un asunto',
+    generalInquiry: 'Consulta General',
+    technicalSupportOption: 'Soporte Técnico',
+    salesPricing: 'Ventas y Precios',
+    enterpriseSolutions: 'Soluciones Empresariales',
+    partnershipOpportunities: 'Oportunidades de Asociación',
+    namePlaceholder: 'Tu nombre completo',
+    emailPlaceholder: 'tu@correo.com',
+    companyPlaceholder: 'Nombre de tu empresa',
+    messagePlaceholder: 'Dinos cómo podemos ayudarte...',
+    sendMessageButton: 'Enviar Mensaje',
+    messageSuccess: '¡Gracias! Tu mensaje ha sido enviado exitosamente.',
+    messageError: 'Lo siento, hubo un error enviando tu mensaje. Por favor intenta de nuevo.',
+    sending: 'Enviando...',
     
     // FAQ
     faqTitle: 'Preguntas Frecuentes',
@@ -445,6 +535,36 @@ export const translations: Record<string, Translation> = {
     // Contact Page
     contactTitle: 'Nous Contacter',
     contactDescription: 'Contactez notre équipe. Nous sommes là pour vous aider à réussir.',
+    contactInformation: 'Informations de Contact',
+    generalInquiries: 'Demandes Générales',
+    generalInquiriesDesc: 'Questions sur Snapbyte ou informations générales',
+    technicalSupport: 'Support Technique',
+    technicalSupportDesc: 'Besoin d\'aide pour l\'intégration ou le dépannage?',
+    salesEnterprise: 'Ventes et Entreprise',
+    salesEnterpriseDesc: 'Intéressé par les solutions d\'entreprise ou avez des questions sur les prix?',
+    phoneSupport: 'Support Téléphonique',
+    phoneSupportDesc: 'Vous préférez parler? Appelez-nous',
+    ourOffice: 'Notre Bureau',
+    sendMessage: 'Envoyez-nous un Message',
+    nameLabel: 'Nom',
+    emailLabel: 'Email',
+    companyLabel: 'Entreprise',
+    subjectLabel: 'Sujet',
+    messageLabel: 'Message',
+    selectSubject: 'Sélectionnez un sujet',
+    generalInquiry: 'Demande Générale',
+    technicalSupportOption: 'Support Technique',
+    salesPricing: 'Ventes et Prix',
+    enterpriseSolutions: 'Solutions d\'Entreprise',
+    partnershipOpportunities: 'Opportunités de Partenariat',
+    namePlaceholder: 'Votre nom complet',
+    emailPlaceholder: 'votre@email.com',
+    companyPlaceholder: 'Nom de votre entreprise',
+    messagePlaceholder: 'Dites-nous comment nous pouvons vous aider...',
+    sendMessageButton: 'Envoyer le Message',
+    messageSuccess: 'Merci! Votre message a été envoyé avec succès.',
+    messageError: 'Désolé, il y a eu une erreur lors de l\'envoi de votre message. Veuillez réessayer.',
+    sending: 'Envoi en cours...',
     
     // FAQ
     faqTitle: 'Questions Fréquemment Posées',
@@ -568,6 +688,36 @@ export const translations: Record<string, Translation> = {
     // Contact Page
     contactTitle: 'Kontakt',
     contactDescription: 'Kontaktieren Sie unser Team. Wir sind hier, um Ihnen zum Erfolg zu verhelfen.',
+    contactInformation: 'Kontaktinformationen',
+    generalInquiries: 'Allgemeine Anfragen',
+    generalInquiriesDesc: 'Fragen zu Snapbyte oder allgemeine Informationen',
+    technicalSupport: 'Technischer Support',
+    technicalSupportDesc: 'Brauchen Sie Hilfe bei der Integration oder Fehlersuche?',
+    salesEnterprise: 'Vertrieb & Enterprise',
+    salesEnterpriseDesc: 'Interessiert an Enterprise-Lösungen oder haben Sie Fragen zu Preisen?',
+    phoneSupport: 'Telefonischer Support',
+    phoneSupportDesc: 'Sprechen Sie lieber? Rufen Sie uns an',
+    ourOffice: 'Unser Büro',
+    sendMessage: 'Senden Sie uns eine Nachricht',
+    nameLabel: 'Name',
+    emailLabel: 'E-Mail',
+    companyLabel: 'Unternehmen',
+    subjectLabel: 'Betreff',
+    messageLabel: 'Nachricht',
+    selectSubject: 'Wählen Sie einen Betreff',
+    generalInquiry: 'Allgemeine Anfrage',
+    technicalSupportOption: 'Technischer Support',
+    salesPricing: 'Vertrieb & Preise',
+    enterpriseSolutions: 'Enterprise-Lösungen',
+    partnershipOpportunities: 'Partnerschaftsmöglichkeiten',
+    namePlaceholder: 'Ihr vollständiger Name',
+    emailPlaceholder: 'Ihre E-Mail-Adresse',
+    companyPlaceholder: 'Name Ihres Unternehmens',
+    messagePlaceholder: 'Erzählen Sie uns, wie wir Ihnen helfen können...',
+    sendMessageButton: 'Nachricht Senden',
+    messageSuccess: 'Danke! Ihre Nachricht wurde erfolgreich gesendet.',
+    messageError: 'Entschuldigung, es gab einen Fehler beim Senden Ihrer Nachricht. Bitte versuchen Sie es erneut.',
+    sending: 'Senden...',
     
     // FAQ
     faqTitle: 'Häufig Gestellte Fragen',
@@ -691,6 +841,36 @@ export const translations: Record<string, Translation> = {
     // Contact Page
     contactTitle: 'お問い合わせ',
     contactDescription: '私たちのチームにお気軽にお問い合わせください。お客様の成功をサポートいたします。',
+    contactInformation: '連絡先情報',
+    generalInquiries: '一般的なお問い合わせ',
+    generalInquiriesDesc: 'Snapbyteに関する質問や一般的な情報',
+    technicalSupport: '技術サポート',
+    technicalSupportDesc: '統合やトラブルシューティングのサポートが必要ですか？',
+    salesEnterprise: '営業とエンタープライズ',
+    salesEnterpriseDesc: 'エンタープライズソリューションに興味がありますか？価格について質問がありますか？',
+    phoneSupport: '電話サポート',
+    phoneSupportDesc: 'お電話でのサポートをご希望ですか？お電話ください',
+    ourOffice: '私たちのオフィス',
+    sendMessage: 'メッセージを送信',
+    nameLabel: '名前',
+    emailLabel: 'メール',
+    companyLabel: '会社',
+    subjectLabel: '件名',
+    messageLabel: 'メッセージ',
+    selectSubject: '件名を選択',
+    generalInquiry: '一般的なお問い合わせ',
+    technicalSupportOption: '技術サポート',
+    salesPricing: '営業と価格',
+    enterpriseSolutions: 'エンタープライズソリューション',
+    partnershipOpportunities: 'パートナーシップの機会',
+    namePlaceholder: 'あなたのフルネーム',
+    emailPlaceholder: 'あなたのメールアドレス',
+    companyPlaceholder: 'あなたの会社名',
+    messagePlaceholder: 'どのようにお手伝いできるか教えてください...',
+    sendMessageButton: 'メッセージを送信',
+    messageSuccess: 'ありがとうございます！メッセージは正常に送信されました。',
+    messageError: '申し訳ありませんが、メッセージの送信中にエラーが発生しました。もう一度お試しください。',
+    sending: '送信中...',
     
     // FAQ
     faqTitle: 'よくある質問',
@@ -814,6 +994,36 @@ export const translations: Record<string, Translation> = {
     // Contact Page
     contactTitle: '联系我们',
     contactDescription: '与我们的团队取得联系。我们在这里帮助您成功。',
+    contactInformation: '联系信息',
+    generalInquiries: '一般咨询',
+    generalInquiriesDesc: '关于Snapbyte的常见问题或一般信息',
+    technicalSupport: '技术支持',
+    technicalSupportDesc: '需要集成或故障排除的帮助吗？',
+    salesEnterprise: '销售与企业',
+    salesEnterpriseDesc: '对企业解决方案感兴趣或有定价问题？',
+    phoneSupport: '电话支持',
+    phoneSupportDesc: '更喜欢通话？给我们打电话',
+    ourOffice: '我们的办公室',
+    sendMessage: '发送消息',
+    nameLabel: '姓名',
+    emailLabel: '电子邮件',
+    companyLabel: '公司',
+    subjectLabel: '主题',
+    messageLabel: '消息',
+    selectSubject: '选择主题',
+    generalInquiry: '一般咨询',
+    technicalSupportOption: '技术支持',
+    salesPricing: '销售与定价',
+    enterpriseSolutions: '企业解决方案',
+    partnershipOpportunities: '合作机会',
+    namePlaceholder: '您的全名',
+    emailPlaceholder: '您的电子邮件地址',
+    companyPlaceholder: '您的公司名称',
+    messagePlaceholder: '告诉我们如何帮助您...',
+    sendMessageButton: '发送消息',
+    messageSuccess: '谢谢！您的消息已成功发送。',
+    messageError: '抱歉，发送消息时发生错误。请再试一次。',
+    sending: '发送中...',
     
     // FAQ
     faqTitle: '常见问题',
