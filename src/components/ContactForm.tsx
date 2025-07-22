@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
+import { useLanguage } from './ThemeLanguageProvider';
 
 interface ContactFormData {
   name: string;
@@ -13,8 +14,9 @@ interface EmailPayload {
   email: string;
   content: string;
   subject: string;
+  recipientName: string;
+  language: string;
   recaptchaToken: string;
-  name: string;
   company?: string;
   category: string;
 }
@@ -54,7 +56,7 @@ declare global {
 }
 
 const RECAPTCHA_SITE_KEY = '6LfMxS4rAAAAALOf-uWoW3kaH9gJmC7sfESdJcO-';
-const EMAIL_API_URL = 'https://mail-for-portfolio.vercel.app/api/send-smtp-email';
+const EMAIL_API_URL = 'https://api.ifateam.dev';
 
 // Custom hook for reCAPTCHA v3
 const useRecaptcha = (siteKey: string) => {
@@ -105,7 +107,7 @@ const useRecaptcha = (siteKey: string) => {
 // Email sending function using async/await pattern
 const sendEmail = async (data: EmailPayload): Promise<void> => {
   try {
-    const response = await axios.post(EMAIL_API_URL, data, {
+    const response = await axios.post(`${EMAIL_API_URL}/api/send-smtp-email`, data, {
       headers: {
         'Content-Type': 'application/json',
       },
@@ -123,7 +125,8 @@ const sendEmail = async (data: EmailPayload): Promise<void> => {
   }
 };
 
-export const ContactForm: React.FC<ContactFormProps> = ({ translations: t }) => {
+export const ContactForm: React.FC<ContactFormProps> = () => {
+  const { t, language } = useLanguage();
   const { isReady: isRecaptchaReady, executeRecaptcha } = useRecaptcha(RECAPTCHA_SITE_KEY);
   
   const [formData, setFormData] = useState<ContactFormData>({
@@ -169,8 +172,9 @@ export const ContactForm: React.FC<ContactFormProps> = ({ translations: t }) => 
         subject: `[Contact Form - ${formData.subject}] ${formData.name}${
           formData.company ? ` from ${formData.company}` : ''
         }`,
+        recipientName: formData.name,
+        language: language,
         recaptchaToken,
-        name: formData.name,
         company: formData.company,
         category: formData.subject,
       };
@@ -246,7 +250,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ translations: t }) => 
             onChange={handleInputChange}
             required
             className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-            placeholder={t.emailPlaceholder}
+            placeholder="example@snapbyte.io"
             disabled={isSubmitting}
           />
         </div>
