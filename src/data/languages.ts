@@ -19,6 +19,7 @@ export interface Translation {
   heroDescription: string;
   getStarted: string;
   learnMore: string;
+  seeHowItWorks: string;
   
   // Features Section
   featuresTitle: string;
@@ -79,6 +80,52 @@ export interface Translation {
   privacyPolicy: string;
   termsOfService: string;
   allRightsReserved: string;
+  
+  // Pricing Plans
+  trialPlan: string;
+  trialDescription: string;
+  trialCacheLifetime: string;
+  trialAutoExtension: string;
+  trialBandwidth: string;
+  
+  proPlan: string;
+  proDescription: string;
+  proCacheLifetime: string;
+  proAutoExtension: string;
+  
+  enterprisePlan: string;
+  enterpriseDescription: string;
+  enterpriseCacheLifetime: string;
+  enterpriseAutoExtension: string;
+  enterpriseStorageFees: string;
+  enterpriseNote: string;
+  
+  noStorageFees: string;
+  contactSales: string;
+  getStartedFree: string;
+  
+  // Pricing Features
+  trialFeature1: string;
+  trialFeature2: string;
+  trialFeature3: string;
+  trialFeature4: string;
+  
+  proFeature1: string;
+  proFeature2: string;
+  proFeature3: string;
+  proFeature4: string;
+  
+  enterpriseFeature1: string;
+  enterpriseFeature2: string;
+  enterpriseFeature3: string;
+  enterpriseFeature4: string;
+  
+  // Bandwidth Pricing
+  bandwidthPricing: string;
+  bandwidthDescription: string;
+  bandwidthFeature1: string;
+  bandwidthFeature2: string;
+  bandwidthFeature3: string;
 }
 
 export const languages: Language[] = [
@@ -106,6 +153,7 @@ export const translations: Record<string, Translation> = {
     heroDescription: 'Optimize, transform, and deliver files at scale with our intelligent CDN. Built for developers who demand performance.',
     getStarted: 'Get Started',
     learnMore: 'Learn More',
+    seeHowItWorks: 'See How It Works',
     
     // Features Section
     featuresTitle: 'Everything You Need to Deliver Fast',
@@ -166,6 +214,52 @@ export const translations: Record<string, Translation> = {
     privacyPolicy: 'Privacy Policy',
     termsOfService: 'Terms of Service',
     allRightsReserved: 'All rights reserved',
+    
+    // Pricing Plans
+    trialPlan: 'Trial Plan',
+    trialDescription: 'Perfect for testing Snapbyte\'s caching capabilities',
+    trialCacheLifetime: 'Files are cached for up to 7 days',
+    trialAutoExtension: 'No auto-extension',
+    trialBandwidth: 'Bandwidth: 10 TB',
+    
+    proPlan: 'Pro Plan',
+    proDescription: 'Ideal for high-volume or time-sensitive content',
+    proCacheLifetime: 'Files are cached for up to 30 days',
+    proAutoExtension: 'Auto-extension: If a file is frequently accessed, its cache lifetime is automatically extended',
+    
+    enterprisePlan: 'Enterprise Plan',
+    enterpriseDescription: 'Best for critical assets requiring long-term availability',
+    enterpriseCacheLifetime: 'Files are cached indefinitely',
+    enterpriseAutoExtension: 'Guaranteed persistent caching',
+    enterpriseStorageFees: 'Storage fee: $7 per TB per month',
+    enterpriseNote: '⚠️ Note: Although files are cached permanently, Snapbyte is a data caching system — it should not be used as a primary or long-term storage location.',
+    
+    noStorageFees: 'No storage fees',
+    contactSales: 'Contact Sales',
+    getStartedFree: 'Get Started Free',
+    
+    // Pricing Features
+    trialFeature1: '7-day cache lifetime',
+    trialFeature2: '10 TB bandwidth included',
+    trialFeature3: 'Basic analytics',
+    trialFeature4: 'Community support',
+    
+    proFeature1: '30-day cache lifetime',
+    proFeature2: 'Intelligent auto-extension',
+    proFeature3: 'Advanced analytics',
+    proFeature4: 'Priority support',
+    
+    enterpriseFeature1: 'Indefinite cache lifetime',
+    enterpriseFeature2: 'Guaranteed persistent caching',
+    enterpriseFeature3: 'Premium analytics',
+    enterpriseFeature4: '24/7 dedicated support',
+    
+    // Bandwidth Pricing
+    bandwidthPricing: '🌐 Bandwidth Pricing',
+    bandwidthDescription: 'We charge based on the bandwidth delivered from Snapbyte\'s cache to your users.',
+    bandwidthFeature1: 'Bandwidth pricing is customized per customer',
+    bandwidthFeature2: 'Depends on usage volume, region, and delivery model',
+    bandwidthFeature3: 'Contact us for personalized pricing',
   },
   es: {
     // Navigation
@@ -182,6 +276,7 @@ export const translations: Record<string, Translation> = {
     heroDescription: 'Optimiza, transforma y entrega archivos a escala con nuestro CDN inteligente. Construido para desarrolladores que exigen rendimiento.',
     getStarted: 'Comenzar',
     learnMore: 'Saber Más',
+    seeHowItWorks: 'Ver Cómo Funciona',
     
     // Features Section
     featuresTitle: 'Todo lo que Necesitas para Entregar Rápido',
@@ -242,6 +337,52 @@ export const translations: Record<string, Translation> = {
     privacyPolicy: 'Política de Privacidad',
     termsOfService: 'Términos de Servicio',
     allRightsReserved: 'Todos los derechos reservados',
+    
+    // Pricing Plans
+    trialPlan: 'Plan de Prueba',
+    trialDescription: 'Perfecto para probar las capacidades de caché de Snapbyte',
+    trialCacheLifetime: 'Los archivos se almacenan en caché hasta 7 días',
+    trialAutoExtension: 'Sin extensión automática',
+    trialBandwidth: 'Ancho de banda: 10 TB',
+    
+    proPlan: 'Plan Pro',
+    proDescription: 'Ideal para contenido de alto volumen o crítico en el tiempo',
+    proCacheLifetime: 'Los archivos se almacenan en caché hasta 30 días',
+    proAutoExtension: 'Extensión automática: Si un archivo se accede frecuentemente, su tiempo de caché se extiende automáticamente',
+    
+    enterprisePlan: 'Plan Enterprise',
+    enterpriseDescription: 'Mejor para recursos críticos que requieren disponibilidad a largo plazo',
+    enterpriseCacheLifetime: 'Los archivos se almacenan en caché indefinidamente',
+    enterpriseAutoExtension: 'Caché persistente garantizado',
+    enterpriseStorageFees: 'Tarifa de almacenamiento: $7 por TB por mes',
+    enterpriseNote: '⚠️ Nota: Aunque los archivos se almacenan permanentemente en caché, Snapbyte es un sistema de caché de datos: no debe usarse como ubicación de almacenamiento primaria o a largo plazo.',
+    
+    noStorageFees: 'Sin tarifas de almacenamiento',
+    contactSales: 'Contactar Ventas',
+    getStartedFree: 'Comenzar Gratis',
+    
+    // Pricing Features
+    trialFeature1: 'Tiempo de caché de 7 días',
+    trialFeature2: '10 TB de ancho de banda incluido',
+    trialFeature3: 'Análisis básicos',
+    trialFeature4: 'Soporte de la comunidad',
+    
+    proFeature1: 'Tiempo de caché de 30 días',
+    proFeature2: 'Extensión automática inteligente',
+    proFeature3: 'Análisis avanzados',
+    proFeature4: 'Soporte prioritario',
+    
+    enterpriseFeature1: 'Tiempo de caché indefinido',
+    enterpriseFeature2: 'Caché persistente garantizado',
+    enterpriseFeature3: 'Análisis premium',
+    enterpriseFeature4: 'Soporte dedicado 24/7',
+    
+    // Bandwidth Pricing
+    bandwidthPricing: '🌐 Precios de Ancho de Banda',
+    bandwidthDescription: 'Cobramos basado en el ancho de banda entregado desde el caché de Snapbyte a tus usuarios.',
+    bandwidthFeature1: 'Los precios de ancho de banda se personalizan por cliente',
+    bandwidthFeature2: 'Depende del volumen de uso, región y modelo de entrega',
+    bandwidthFeature3: 'Contáctanos para precios personalizados',
   },
   fr: {
     // Navigation
@@ -258,6 +399,7 @@ export const translations: Record<string, Translation> = {
     heroDescription: 'Optimisez, transformez et livrez des fichiers à grande échelle avec notre CDN intelligent. Conçu pour les développeurs qui exigent la performance.',
     getStarted: 'Commencer',
     learnMore: 'En Savoir Plus',
+    seeHowItWorks: 'Voir Comment Ça Marche',
     
     // Features Section
     featuresTitle: 'Tout ce dont Vous Avez Besoin pour Livrer Rapidement',
@@ -318,6 +460,52 @@ export const translations: Record<string, Translation> = {
     privacyPolicy: 'Politique de Confidentialité',
     termsOfService: 'Conditions de Service',
     allRightsReserved: 'Tous droits réservés',
+    
+    // Pricing Plans
+    trialPlan: 'Plan d\'Essai',
+    trialDescription: 'Parfait pour tester les capacités de mise en cache de Snapbyte',
+    trialCacheLifetime: 'Les fichiers sont mis en cache jusqu\'à 7 jours',
+    trialAutoExtension: 'Pas d\'extension automatique',
+    trialBandwidth: 'Bande passante : 10 TB',
+    
+    proPlan: 'Plan Pro',
+    proDescription: 'Idéal pour du contenu à fort volume ou sensible au temps',
+    proCacheLifetime: 'Les fichiers sont mis en cache jusqu\'à 30 jours',
+    proAutoExtension: 'Extension automatique : Si un fichier est fréquemment accédé, sa durée de cache est automatiquement étendue',
+    
+    enterprisePlan: 'Plan Enterprise',
+    enterpriseDescription: 'Meilleur pour les ressources critiques nécessitant une disponibilité à long terme',
+    enterpriseCacheLifetime: 'Les fichiers sont mis en cache indéfiniment',
+    enterpriseAutoExtension: 'Cache persistant garanti',
+    enterpriseStorageFees: 'Frais de stockage : 7$ par TB par mois',
+    enterpriseNote: '⚠️ Note : Bien que les fichiers soient mis en cache de manière permanente, Snapbyte est un système de mise en cache de données — il ne doit pas être utilisé comme emplacement de stockage principal ou à long terme.',
+    
+    noStorageFees: 'Pas de frais de stockage',
+    contactSales: 'Contacter les Ventes',
+    getStartedFree: 'Commencer Gratuitement',
+    
+    // Pricing Features
+    trialFeature1: 'Durée de cache de 7 jours',
+    trialFeature2: '10 TB de bande passante inclus',
+    trialFeature3: 'Analyses de base',
+    trialFeature4: 'Support communautaire',
+    
+    proFeature1: 'Durée de cache de 30 jours',
+    proFeature2: 'Extension automatique intelligente',
+    proFeature3: 'Analyses avancées',
+    proFeature4: 'Support prioritaire',
+    
+    enterpriseFeature1: 'Durée de cache indéfinie',
+    enterpriseFeature2: 'Cache persistant garanti',
+    enterpriseFeature3: 'Analyses premium',
+    enterpriseFeature4: 'Support dédié 24/7',
+    
+    // Bandwidth Pricing
+    bandwidthPricing: '🌐 Tarification de la Bande Passante',
+    bandwidthDescription: 'Nous facturons selon la bande passante délivrée du cache de Snapbyte à vos utilisateurs.',
+    bandwidthFeature1: 'La tarification de la bande passante est personnalisée par client',
+    bandwidthFeature2: 'Dépend du volume d\'utilisation, de la région et du modèle de livraison',
+    bandwidthFeature3: 'Contactez-nous pour une tarification personnalisée',
   },
   de: {
     // Navigation
@@ -334,6 +522,7 @@ export const translations: Record<string, Translation> = {
     heroDescription: 'Optimieren, transformieren und übertragen Sie Dateien im großen Maßstab mit unserem intelligenten CDN. Entwickelt für Entwickler, die Leistung verlangen.',
     getStarted: 'Loslegen',
     learnMore: 'Mehr Erfahren',
+    seeHowItWorks: 'Sehen Sie, Wie Es Funktioniert',
     
     // Features Section
     featuresTitle: 'Alles was Sie für Schnelle Übertragung Brauchen',
@@ -394,6 +583,52 @@ export const translations: Record<string, Translation> = {
     privacyPolicy: 'Datenschutzrichtlinie',
     termsOfService: 'Nutzungsbedingungen',
     allRightsReserved: 'Alle Rechte vorbehalten',
+    
+    // Pricing Plans
+    trialPlan: 'Testplan',
+    trialDescription: 'Perfekt zum Testen der Snapbyte-Cache-Funktionen',
+    trialCacheLifetime: 'Dateien werden bis zu 7 Tage zwischengespeichert',
+    trialAutoExtension: 'Keine automatische Verlängerung',
+    trialBandwidth: 'Bandbreite: 10 TB',
+    
+    proPlan: 'Pro Plan',
+    proDescription: 'Ideal für hochvolumige oder zeitkritische Inhalte',
+    proCacheLifetime: 'Dateien werden bis zu 30 Tage zwischengespeichert',
+    proAutoExtension: 'Automatische Verlängerung: Wenn auf eine Datei häufig zugegriffen wird, wird ihre Cache-Lebensdauer automatisch verlängert',
+    
+    enterprisePlan: 'Enterprise Plan',
+    enterpriseDescription: 'Am besten für kritische Assets, die langfristige Verfügbarkeit erfordern',
+    enterpriseCacheLifetime: 'Dateien werden unbegrenzt zwischengespeichert',
+    enterpriseAutoExtension: 'Garantierte persistente Zwischenspeicherung',
+    enterpriseStorageFees: 'Speichergebühr: 7$ pro TB pro Monat',
+    enterpriseNote: '⚠️ Hinweis: Obwohl Dateien dauerhaft zwischengespeichert werden, ist Snapbyte ein Daten-Cache-System — es sollte nicht als primärer oder langfristiger Speicherort verwendet werden.',
+    
+    noStorageFees: 'Keine Speichergebühren',
+    contactSales: 'Vertrieb Kontaktieren',
+    getStartedFree: 'Kostenlos Beginnen',
+    
+    // Pricing Features
+    trialFeature1: '7-Tage Cache-Lebensdauer',
+    trialFeature2: '10 TB Bandbreite inklusive',
+    trialFeature3: 'Grundlegende Analysen',
+    trialFeature4: 'Community-Support',
+    
+    proFeature1: '30-Tage Cache-Lebensdauer',
+    proFeature2: 'Intelligente automatische Verlängerung',
+    proFeature3: 'Erweiterte Analysen',
+    proFeature4: 'Prioritätssupport',
+    
+    enterpriseFeature1: 'Unbegrenzte Cache-Lebensdauer',
+    enterpriseFeature2: 'Garantierte persistente Zwischenspeicherung',
+    enterpriseFeature3: 'Premium-Analysen',
+    enterpriseFeature4: '24/7 dedizierter Support',
+    
+    // Bandwidth Pricing
+    bandwidthPricing: '🌐 Bandbreiten-Preise',
+    bandwidthDescription: 'Wir berechnen basierend auf der Bandbreite, die vom Snapbyte-Cache an Ihre Benutzer geliefert wird.',
+    bandwidthFeature1: 'Bandbreiten-Preise werden pro Kunde angepasst',
+    bandwidthFeature2: 'Abhängig von Nutzungsvolumen, Region und Bereitstellungsmodell',
+    bandwidthFeature3: 'Kontaktieren Sie uns für personalisierte Preise',
   },
   ja: {
     // Navigation
@@ -410,6 +645,7 @@ export const translations: Record<string, Translation> = {
     heroDescription: 'インテリジェントCDNでファイルを大規模に最適化、変換、配信。パフォーマンスを求める開発者のために構築。',
     getStarted: '始める',
     learnMore: '詳細を見る',
+    seeHowItWorks: '仕組みを見る',
     
     // Features Section
     featuresTitle: '高速配信に必要なすべて',
@@ -470,6 +706,52 @@ export const translations: Record<string, Translation> = {
     privacyPolicy: 'プライバシーポリシー',
     termsOfService: '利用規約',
     allRightsReserved: '全著作権所有',
+    
+    // Pricing Plans
+    trialPlan: 'トライアルプラン',
+    trialDescription: 'Snapbyteのキャッシュ機能をテストするのに最適',
+    trialCacheLifetime: 'ファイルは最大7日間キャッシュされます',
+    trialAutoExtension: '自動延長なし',
+    trialBandwidth: '帯域幅：10 TB',
+    
+    proPlan: 'プロプラン',
+    proDescription: '大容量または時間が重要なコンテンツに最適',
+    proCacheLifetime: 'ファイルは最大30日間キャッシュされます',
+    proAutoExtension: '自動延長：ファイルが頻繁にアクセスされる場合、キャッシュの寿命が自動的に延長されます',
+    
+    enterprisePlan: 'エンタープライズプラン',
+    enterpriseDescription: '長期的な可用性が必要な重要なアセットに最適',
+    enterpriseCacheLifetime: 'ファイルは無期限にキャッシュされます',
+    enterpriseAutoExtension: '永続的キャッシュ保証',
+    enterpriseStorageFees: 'ストレージ料金：月額TB当たり$7',
+    enterpriseNote: '⚠️ 注意：ファイルは永続的にキャッシュされますが、Snapbyteはデータキャッシュシステムです — プライマリまたは長期ストレージ場所として使用すべきではありません。',
+    
+    noStorageFees: 'ストレージ料金なし',
+    contactSales: '営業に連絡',
+    getStartedFree: '無料で始める',
+    
+    // Pricing Features
+    trialFeature1: '7日間のキャッシュ寿命',
+    trialFeature2: '10 TBの帯域幅が含まれています',
+    trialFeature3: '基本分析',
+    trialFeature4: 'コミュニティサポート',
+    
+    proFeature1: '30日間のキャッシュ寿命',
+    proFeature2: 'インテリジェント自動延長',
+    proFeature3: '高度な分析',
+    proFeature4: '優先サポート',
+    
+    enterpriseFeature1: '無期限のキャッシュ寿命',
+    enterpriseFeature2: '永続的キャッシュ保証',
+    enterpriseFeature3: 'プレミアム分析',
+    enterpriseFeature4: '24/7専用サポート',
+    
+    // Bandwidth Pricing
+    bandwidthPricing: '🌐 帯域幅料金',
+    bandwidthDescription: 'Snapbyteのキャッシュからユーザーに配信される帯域幅に基づいて課金します。',
+    bandwidthFeature1: '帯域幅料金は顧客ごとにカスタマイズされます',
+    bandwidthFeature2: '使用量、地域、配信モデルに依存します',
+    bandwidthFeature3: 'パーソナライズされた料金についてお問い合わせください',
   },
   zh: {
     // Navigation
@@ -486,6 +768,7 @@ export const translations: Record<string, Translation> = {
     heroDescription: '使用我们的智能CDN大规模优化、转换和传输文件。专为追求性能的开发者打造。',
     getStarted: '开始使用',
     learnMore: '了解更多',
+    seeHowItWorks: '查看工作原理',
     
     // Features Section
     featuresTitle: '快速传输所需的一切',
@@ -546,6 +829,52 @@ export const translations: Record<string, Translation> = {
     privacyPolicy: '隐私政策',
     termsOfService: '服务条款',
     allRightsReserved: '版权所有',
+    
+    // Pricing Plans
+    trialPlan: '试用计划',
+    trialDescription: '测试Snapbyte缓存功能的理想选择',
+    trialCacheLifetime: '文件缓存时间最长7天',
+    trialAutoExtension: '无自动延期',
+    trialBandwidth: '带宽：10 TB',
+    
+    proPlan: '专业计划',
+    proDescription: '适合高容量或时间敏感的内容',
+    proCacheLifetime: '文件缓存时间最长30天',
+    proAutoExtension: '自动延期：如果文件被频繁访问，其缓存生命周期会自动延长',
+    
+    enterprisePlan: '企业计划',
+    enterpriseDescription: '适合需要长期可用性的关键资产',
+    enterpriseCacheLifetime: '文件无限期缓存',
+    enterpriseAutoExtension: '保证持久缓存',
+    enterpriseStorageFees: '存储费用：每TB每月$7',
+    enterpriseNote: '⚠️ 注意：虽然文件被永久缓存，但Snapbyte是一个数据缓存系统——不应用作主要或长期存储位置。',
+    
+    noStorageFees: '无存储费用',
+    contactSales: '联系销售',
+    getStartedFree: '免费开始',
+    
+    // Pricing Features
+    trialFeature1: '7天缓存生命周期',
+    trialFeature2: '包含10 TB带宽',
+    trialFeature3: '基础分析',
+    trialFeature4: '社区支持',
+    
+    proFeature1: '30天缓存生命周期',
+    proFeature2: '智能自动延期',
+    proFeature3: '高级分析',
+    proFeature4: '优先支持',
+    
+    enterpriseFeature1: '无限缓存生命周期',
+    enterpriseFeature2: '保证持久缓存',
+    enterpriseFeature3: '高级分析',
+    enterpriseFeature4: '24/7专用支持',
+    
+    // Bandwidth Pricing
+    bandwidthPricing: '🌐 带宽定价',
+    bandwidthDescription: '我们根据从Snapbyte缓存向您的用户传输的带宽收费。',
+    bandwidthFeature1: '带宽定价按客户定制',
+    bandwidthFeature2: '取决于使用量、地区和交付模式',
+    bandwidthFeature3: '联系我们获取个性化定价',
   },
 };
 

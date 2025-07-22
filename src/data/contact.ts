@@ -1,6 +1,6 @@
 export const contactInfo = {
-  email: "support@snapbyte.io",
-  support: "support@snapbyte.io",
+  email: "business@snapbyte.io",
+  support: "business@snapbyte.io",
   sales: "sales@snapbyte.io",
   phone: "+1 (555) 123-4567",
   address: {

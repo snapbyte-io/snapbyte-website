@@ -1,4 +1,6 @@
 ---
+import dashboardLight from '../assets/dashboard-light.png';
+import dashboardDark from '../assets/dashboard-dark.png';
 ---
 
 <section class="relative bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-20 lg:py-32 overflow-hidden transition-colors duration-300" id="demo">
@@ -7,74 +9,63 @@
       <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
         Simple API, Powerful Results
       </h2>
-      <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-        Get started in minutes with our intuitive API. 
-        Upload, optimize, and deliver files globally with just a few lines of code.
-      </p>
     </div>
     
     <div class="max-w-4xl mx-auto">
-      <!-- Code Example -->
       <div class="bg-gray-900 rounded-xl overflow-hidden shadow-2xl">
-        <div class="flex items-center justify-between px-6 py-4 bg-gray-800">
-          <div class="flex space-x-2">
-            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
-            <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+        <!-- Browser Title Bar -->
+        <div class="flex items-center justify-between px-4 py-2 bg-gray-200 dark:bg-gray-700">
+          <div class="flex items-center space-x-3">
+            <div class="flex space-x-2">
+              <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+              <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+              <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+            </div>
+            <span class="text-gray-600 dark:text-gray-400 text-sm font-medium ml-2">SnapByte</span>
           </div>
-          <span class="text-gray-400 text-sm">upload-file.js</span>
         </div>
         
-        <div class="p-6">
-          <pre class="text-green-400 text-sm md:text-base overflow-x-auto"><code>{`// Upload and optimize a file in seconds
-import { Snapbyte } from '@snapbyte/sdk';
-
-const snapbyte = new Snapbyte(process.env.SNAPBYTE_API_KEY);
-
-// Upload file with automatic optimization
-const result = await snapbyte.upload({
-  file: './my-image.jpg',
-  optimize: true,
-  formats: ['webp', 'avif', 'jpeg'],
-  sizes: [400, 800, 1200]
-});
-
-console.log(\`File available at: \${result.url}\`);
-// → https://cdn.snapbyte.com/abc123/image.jpg
-
-// Get optimized URLs for different devices
-console.log('Mobile:', result.responsive.mobile);
-console.log('Desktop:', result.responsive.desktop);`}</code></pre>
+        <!-- Browser Toolbar -->
+        <div class="flex items-center px-4 py-2 bg-gray-100 dark:bg-gray-600 border-b border-gray-300 dark:border-gray-500">
+          <!-- Navigation buttons -->
+          <div class="flex items-center space-x-1 mr-4">
+            <button class="p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-500">
+              <svg class="w-4 h-4 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+            </button>
+            <button class="p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-500">
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+            <button class="p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-500">
+              <svg class="w-4 h-4 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+              </svg>
+            </button>
+          </div>
+          
+          <!-- Address bar -->
+          <div class="flex-1 flex items-center bg-white dark:bg-gray-800 rounded-md border border-gray-300 dark:border-gray-500 px-3 py-1.5 mr-4">
+            <svg class="w-4 h-4 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            </svg>
+            <span class="text-gray-700 dark:text-gray-300 text-sm">app.snapbyte.io</span>
+          </div>
+          
+          <!-- Menu button -->
+          <button class="p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-500">
+            <svg class="w-4 h-4 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path>
+            </svg>
+          </button>
         </div>
-      </div>
-      
-      <!-- Results -->
-      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-lg p-6 shadow-lg text-center">
-          <div class="text-2xl font-bold text-blue-600 mb-2">80%</div>
-          <div class="text-gray-600">Faster Load Times</div>
+        
+        <div class="p-0">
+            <img src={dashboardLight.src} alt="Dashboard Light" class="w-full h-auto block dark:hidden" />
+            <img src={dashboardDark.src} alt="Dashboard Dark" class="w-full h-auto hidden dark:block" />
         </div>
-        <div class="bg-white rounded-lg p-6 shadow-lg text-center">
-          <div class="text-2xl font-bold text-green-600 mb-2">60%</div>
-          <div class="text-gray-600">Smaller File Sizes</div>
-        </div>
-        <div class="bg-white rounded-lg p-6 shadow-lg text-center">
-          <div class="text-2xl font-bold text-purple-600 mb-2">5min</div>
-          <div class="text-gray-600">Integration Time</div>
-        </div>
-      </div>
-      
-      <!-- CTA -->
-      <div class="text-center mt-12">
-        <a 
-          href="https://docs.snapbyte.io/snapbyte-1259106m0"
-          class="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors duration-200"
-        >
-          View Full Documentation
-          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-          </svg>
-        </a>
       </div>
     </div>
   </div>
