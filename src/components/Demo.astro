@@ -6,7 +6,7 @@ import dashboardDark from '../assets/dashboard-dark.png';
 <section class="relative bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-20 lg:py-32 overflow-hidden transition-colors duration-300" id="demo">
   <div class="container mx-auto px-6">
     <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4" data-i18n="demoTitle">
         Simple API, Powerful Results
       </h2>
     </div>
@@ -67,6 +67,19 @@ import dashboardDark from '../assets/dashboard-dark.png';
             <img src={dashboardDark.src} alt="Dashboard Dark" class="w-full h-auto hidden dark:block" />
         </div>
       </div>
+      
+    </div>
+    {/* Enhanced button */}
+    <div class="pt-8 max-w-4xl mx-auto text-center">
+      <a
+        href="https://docs.snapbyte.io/"
+        class="group/btn inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 dark:from-blue-500 dark:to-purple-500 dark:hover:from-blue-600 dark:hover:to-purple-600"
+      >
+        <span class="mr-2" data-i18n="seeDocumentation">See Documentation</span>
+        <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
     </div>
   </div>
 </section>

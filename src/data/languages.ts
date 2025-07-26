@@ -37,7 +37,22 @@ export interface Translation {
   twentyFourSevenSupportDesc: string;
   easyIntegration: string;
   easyIntegrationDesc: string;
-  
+
+  //Demo Section
+  demoTitle: string;
+  demoDescription: string;
+  seeDocumentation: string;
+
+  //Team Section
+  meetOurTeam: string;
+  viewProfile: string;
+
+  // Customers Section
+  customersTitle: string;
+  customersSubtitle: string;
+  customersBandwidthPerMonth: string;
+  customersDataServed: string;
+
   // CTA
   ctaTitle: string;
   ctaDescription: string;
@@ -203,7 +218,21 @@ export const translations: Record<string, Translation> = {
     twentyFourSevenSupportDesc: 'And whenever you need help, our 24/7 support team is here to assist you — anytime, anywhere.',
     easyIntegration: 'Easy Integration',
     easyIntegrationDesc: 'Works with any framework or platform. Drop-in replacement for existing file storage with zero configuration.',
-    
+
+    //Demo Section
+    demoTitle: 'Simple API, Powerful Results, Easy integration',
+    demoDescription: 'Experience the power of Snapbyte with our easy-to-use API. Transform and deliver files effortlessly.',
+    seeDocumentation: 'See Documentation',
+    //Team Section
+    meetOurTeam: 'Meet Our Team',
+    viewProfile: 'View Profile',
+
+    // Customers Section
+    customersTitle: 'Featured Customers',
+    customersSubtitle: 'See how our customers are using Snapbyte to optimize their file delivery.',
+    customersBandwidthPerMonth: 'bandwidth/month',
+    customersDataServed: 'data served',
+
     // CTA
     ctaTitle: 'Ready to Get Started?',
     ctaDescription: 'Try Snapbyte today and experience the difference intelligent file optimization can make for your application.',
@@ -357,7 +386,22 @@ export const translations: Record<string, Translation> = {
     twentyFourSevenSupportDesc: 'Y cuando necesites ayuda, nuestro equipo de soporte 24/7 está aquí para asistirte — en cualquier momento, en cualquier lugar.',
     easyIntegration: 'Integración Fácil',
     easyIntegrationDesc: 'Funciona con cualquier framework o plataforma. Reemplazo directo para almacenamiento de archivos existente sin configuración.',
-    
+
+    //Demo Section
+    demoTitle: 'API Simple, Resultados Poderosos, Integración Fácil',
+    demoDescription: 'Experimenta el poder de Snapbyte con nuestra API fácil de usar. Transforma y entrega archivos sin esfuerzo.',
+    seeDocumentation: 'Ver Documentación',
+
+    // Team Section
+    meetOurTeam: 'Conoce a Nuestro Equipo',
+    viewProfile: 'Ver Perfil',
+
+    // Customers Section
+    customersTitle: 'Clientes Destacados',
+    customersSubtitle: 'Vea cómo nuestros clientes están utilizando Snapbyte para optimizar la entrega de archivos.',
+    customersBandwidthPerMonth: 'banda ancha/mes',
+    customersDataServed: 'datos servidos',
+
     // CTA
     ctaTitle: '¿Listo para Comenzar?',
     ctaDescription: 'Prueba Snapbyte hoy y experimenta la diferencia que la optimización inteligente de archivos puede hacer en tu aplicación.',
@@ -511,7 +555,20 @@ export const translations: Record<string, Translation> = {
     twentyFourSevenSupportDesc: 'Et quand vous avez besoin d\'aide, notre équipe de support 24/7 est là pour vous assister — à tout moment, n\'importe où.',
     easyIntegration: 'Intégration Facile',
     easyIntegrationDesc: 'Fonctionne avec n\'importe quel framework ou plateforme. Remplacement direct pour le stockage de fichiers existant sans configuration.',
-    
+
+    //Demo Section
+    demoTitle: 'API Simple, Résultats Puissants, Intégration Facile',
+    demoDescription: 'Découvrez la puissance de Snapbyte avec notre API facile à utiliser. Transformez et livrez des fichiers sans effort.',
+    seeDocumentation: 'Voir la Documentation',
+    // Team Section
+    meetOurTeam: 'Rencontrez Notre Équipe',
+    viewProfile: 'Voir le Profil',
+    // Customers Section
+    customersTitle: 'Clients Présentés',
+    customersSubtitle: 'Découvrez comment nos clients utilisent Snapbyte pour optimiser la livraison de fichiers.',
+    customersBandwidthPerMonth: 'bande passante/mois',
+    customersDataServed: 'données servies',
+
     // CTA
     ctaTitle: 'Prêt à Commencer?',
     ctaDescription: 'Essayez Snapbyte aujourd\'hui et découvrez la différence que l\'optimisation intelligente de fichiers peut faire pour votre application.',
@@ -665,6 +722,19 @@ export const translations: Record<string, Translation> = {
     twentyFourSevenSupportDesc: 'Und wann immer Sie Hilfe benötigen, ist unser 24/7-Support-Team da, um Sie zu unterstützen — jederzeit, überall.',
     easyIntegration: 'Einfache Integration',
     easyIntegrationDesc: 'Funktioniert mit jedem Framework oder Plattform. Drop-in-Ersatz für bestehende Dateispeicherung ohne Konfiguration.',
+
+    //Demo Section
+    demoTitle: 'Einfache API, Leistungsstarke Ergebnisse, Einfache Integration',
+    demoDescription: 'Erleben Sie die Leistungsfähigkeit von Snapbyte mit unserer benutzerfreundlichen API. Transformieren und übertragen Sie Dateien mühelos.',
+    seeDocumentation: 'Dokumentation Ansehen',
+    // Team Section
+    meetOurTeam: 'Lernen Sie Unser Team Kennen',
+    viewProfile: 'Profil Ansehen',
+    // Customers Section
+    customersTitle: 'Vorstellung unserer Kunden',
+    customersSubtitle: 'Sehen Sie, wie unsere Kunden Snapbyte nutzen, um die Datei-Übertragung zu optimieren.',
+    customersBandwidthPerMonth: 'bandbreite/pro Monat',
+    customersDataServed: 'daten/übertragen',
     
     // CTA
     ctaTitle: 'Bereit Loszulegen?',
@@ -819,6 +889,19 @@ export const translations: Record<string, Translation> = {
     twentyFourSevenSupportDesc: 'ヘルプが必要なときはいつでも、24/7サポートチームがお手伝いします — いつでも、どこでも。',
     easyIntegration: '簡単な統合',
     easyIntegrationDesc: 'あらゆるフレームワークやプラットフォームで動作。既存ファイルストレージの設定なしのドロップイン置換。',
+
+    //Demo Section
+    demoTitle: 'シンプルなAPI、強力な結果、簡単な統合',
+    demoDescription: '使いやすいAPIでSnapbyteのパワーを体験してください。ファイルを簡単に変換、配信できます。',
+    seeDocumentation: 'ドキュメントを見る',
+    // Team Section
+    meetOurTeam: '私たちのチームに会う',
+    viewProfile: 'プロフィールを見る',
+    // Customers Section
+    customersTitle: '注目の顧客',
+    customersSubtitle: 'Snapbyteを使用してファイル配信を最適化している顧客の事例を見てみましょう。',
+    customersBandwidthPerMonth: '月間帯域幅',
+    customersDataServed: '配信データ量',
     
     // CTA
     ctaTitle: '始める準備はできましたか？',
@@ -973,6 +1056,19 @@ export const translations: Record<string, Translation> = {
     twentyFourSevenSupportDesc: '无论何时您需要帮助，我们的24/7支持团队都在这里为您提供协助 — 随时随地。',
     easyIntegration: '轻松集成',
     easyIntegrationDesc: '适用于任何框架或平台。现有文件存储的即插即用替代品，无需配置。',
+
+    //Demo Section
+    demoTitle: '简单的API，强大的结果，轻松集成',
+    demoDescription: '通过我们易于使用的API体验Snapbyte的强大功能 。轻松转换和传输文件。',
+    seeDocumentation: '查看文档',
+    // Team Section
+    meetOurTeam: '认识我们的团队',
+    viewProfile: '查看个人资料',
+    // Customers Section
+    customersTitle: '客户案例',
+    customersSubtitle: '看看我们的客户如何使用Snapbyte优化文件传输。',
+    customersBandwidthPerMonth: '每月带宽',
+    customersDataServed: '传输数据量',
     
     // CTA
     ctaTitle: '准备开始了吗？',
@@ -1127,7 +1223,20 @@ export const translations: Record<string, Translation> = {
     twentyFourSevenSupportDesc: 'Và bất cứ khi nào bạn cần giúp đỡ, đội ngũ hỗ trợ 24/7 của chúng tôi luôn sẵn sàng hỗ trợ bạn — mọi lúc, mọi nơi.',
     easyIntegration: 'Tích hợp dễ dàng',
     easyIntegrationDesc: 'Hoạt động với mọi framework hoặc nền tảng. Thay thế thả vào cho bộ nhớ tệp hiện có mà không cần cấu hình.',
-    
+
+    //Demo Section
+    demoTitle: 'API đơn giản, Kết quả mạnh mẽ, Tích hợp dễ dàng',
+    demoDescription: 'Trải nghiệm sức mạnh của Snapbyte với API thân thiện với người dùng. Chuyển đổi và phân phối tệp một cách dễ dàng.',
+    seeDocumentation: 'Xem tài liệu',
+    // Team Section
+    meetOurTeam: 'Gặp gỡ đội ngũ của chúng tôi',
+    viewProfile: 'Xem hồ sơ',
+    // Customers Section
+    customersTitle: 'Khách hàng tiêu biểu',
+    customersSubtitle: 'Xem cách khách hàng của chúng tôi sử dụng Snapbyte để tối ưu hóa việc phân phối tệp.',
+    customersBandwidthPerMonth: 'băng thông/tháng',
+    customersDataServed: 'dữ liệu đã phục vụ',
+
     // CTA
     ctaTitle: 'Sẵn sàng để bắt đầu?',
     ctaDescription: 'Hãy dùng thử Snapbyte ngay hôm nay và trải nghiệm sự khác biệt mà việc tối ưu hóa tệp thông minh có thể mang lại cho ứng dụng của bạn.',

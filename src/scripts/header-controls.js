@@ -57,7 +57,6 @@ function createLanguageSelector() {
     languageSelector.innerHTML = `
       <button class="flex items-center space-x-2 p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-all duration-200" onclick="toggleLanguageDropdown('${containerId}')">
         <span class="text-sm">${selectedLang.flag}</span>
-        <span class="text-sm font-medium hidden sm:block">${selectedLang.code.toUpperCase()}</span>
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
         </svg>
