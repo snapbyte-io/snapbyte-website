@@ -13,11 +13,16 @@ export interface PricingPlan {
   storageFeesKey: string;
   bandwidth?: string;
   bandwidthKey?: string;
+  bandwidthPrice?: number; // Price per GB per month
+  bandwidthPriceKey?: string;
+  storagePrice?: number; // Price per GB per month for storage
+  storagePriceKey?: string;
   specialNote?: string;
   specialNoteKey?: string;
   popular?: boolean;
   ctaKey: string;
   cta: string;
+  showCalculator?: boolean;
   features: string[];
   featuresKeys: string[];
 }
@@ -36,10 +41,11 @@ export const pricingPlans: PricingPlan[] = [
     autoExtension: "No auto-extension",
     storageFeesKey: "noStorageFees",
     storageFees: "No storage fees",
-    bandwidthKey: "trialBandwidth",
-    bandwidth: "Bandwidth: 10 TB",
+    bandwidthKey: "trialBandwidthLimit",
+    bandwidth: "10 TB bandwidth limit",
     ctaKey: "getStartedFree",
     cta: "Get Started Free",
+    showCalculator: false,
     featuresKeys: ["trialFeature1", "trialFeature2", "trialFeature3", "trialFeature4"],
     features: [
       "7-day cache lifetime",
@@ -61,9 +67,12 @@ export const pricingPlans: PricingPlan[] = [
     autoExtension: "Auto-extension: If a file is frequently accessed, its cache lifetime is automatically extended",
     storageFeesKey: "noStorageFees",
     storageFees: "No storage fees",
+    bandwidthPriceKey: "proBandwidthPrice",
+    bandwidthPrice: 0.003, // $0.003 per GB per month
     popular: true,
-    ctaKey: "contactSales",
-    cta: "Contact Sales",
+    ctaKey: "getStartedFree",
+    cta: "Get Started Free",
+    showCalculator: true,
     featuresKeys: ["proFeature1", "proFeature2", "proFeature3", "proFeature4"],
     features: [
       "30-day cache lifetime",
@@ -84,11 +93,16 @@ export const pricingPlans: PricingPlan[] = [
     autoExtensionKey: "enterpriseAutoExtension",
     autoExtension: "Guaranteed persistent caching",
     storageFeesKey: "enterpriseStorageFees", 
-    storageFees: "Storage fee: $7 per TB per month",
+    storageFees: "Storage fee included",
+    bandwidthPriceKey: "enterpriseBandwidthPrice",
+    bandwidthPrice: 0.003, // $0.003 per GB per month
+    storagePriceKey: "enterpriseStoragePrice",
+    storagePrice: 0.007, // $0.007 per GB per month
     specialNoteKey: "enterpriseNote",
     specialNote: "⚠️ Note: Although files are cached permanently, Snapbyte is a data caching system — it should not be used as a primary or long-term storage location.",
     ctaKey: "contactSales",
     cta: "Contact Sales", 
+    showCalculator: true,
     featuresKeys: ["enterpriseFeature1", "enterpriseFeature2", "enterpriseFeature3", "enterpriseFeature4"],
     features: [
       "Indefinite cache lifetime",
@@ -98,25 +112,3 @@ export const pricingPlans: PricingPlan[] = [
     ]
   }
 ];
-
-export interface BandwidthPricing {
-  titleKey: string;
-  title: string;
-  descriptionKey: string;
-  description: string;
-  featuresKeys: string[];
-  features: string[];
-}
-
-export const bandwidthPricing: BandwidthPricing = {
-  titleKey: "bandwidthPricing",
-  title: "🌐 Bandwidth Pricing",
-  descriptionKey: "bandwidthDescription",
-  description: "We charge based on the bandwidth delivered from Snapbyte's cache to your users.",
-  featuresKeys: ["bandwidthFeature1", "bandwidthFeature2", "bandwidthFeature3"],
-  features: [
-    "Bandwidth pricing is customized per customer",
-    "Depends on usage volume, region, and delivery model", 
-    "Contact us for personalized pricing"
-  ]
-};

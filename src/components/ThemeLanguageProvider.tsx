@@ -67,11 +67,27 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
         setLanguageState(browserLang);
       }
     }
+
+    // Listen for language changes
+    const handleLanguageChange = (event: CustomEvent) => {
+      setLanguageState(event.detail.language);
+    };
+
+    window.addEventListener('languageChange', handleLanguageChange as EventListener);
+    
+    return () => {
+      window.removeEventListener('languageChange', handleLanguageChange as EventListener);
+    };
   }, []);
 
   const setLanguage = (lang: string) => {
     setLanguageState(lang);
     localStorage.setItem('language', lang);
+    
+    // Dispatch event for i18n system
+    window.dispatchEvent(new CustomEvent('languageChange', {
+      detail: { language: lang }
+    }));
   };
 
   const t = translations[language] || translations.en;
