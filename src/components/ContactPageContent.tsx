@@ -52,11 +52,10 @@ const ContactPageContentInner: React.FC = () => {
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
                 {t.contactInformation || 'Contact Information'}
               </h2>
-              
-              <div className="space-y-6">
+              <div className="space-y-6 pt-6">
                 {/* General Inquiries */}
                 <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
-                  <div className="flex items-start space-x-4">
+                  <div className="flex items-start space-x-4 pt-2">
                     <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center flex-shrink-0">
                       <svg className="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.95a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>

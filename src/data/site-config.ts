@@ -20,10 +20,6 @@ export const navigation = [
     href: "/pricing",
   },
   {
-    name: "blog",
-    href: "/blog",
-  },
-  {
     name: "contact",
     href: "/contact",
   }
