@@ -20,6 +20,7 @@ export interface Translation {
   getStarted: string;
   learnMore: string;
   seeHowItWorks: string;
+  talkToSales: string;
   
   // Features Section
   featuresTitle: string;
@@ -185,6 +186,7 @@ export const translations: Record<string, Translation> = {
     getStarted: 'Get Started',
     learnMore: 'Learn More',
     seeHowItWorks: 'See How It Works',
+    talkToSales: 'Talk to Sales',
     
     // Features Section
     featuresTitle: 'Everything You Need to Deliver Fast',
@@ -338,7 +340,8 @@ export const translations: Record<string, Translation> = {
     getStarted: 'Comenzar',
     learnMore: 'Saber Más',
     seeHowItWorks: 'Ver Cómo Funciona',
-    
+    talkToSales: 'Hablar con Ventas',
+
     // Features Section
     featuresTitle: 'Todo lo que Necesitas para Entregar Rápido',
     featuresSubtitle: 'Características poderosas diseñadas para hacer la entrega de archivos fácil, rápida y confiable para desarrolladores y sus usuarios.',
@@ -491,6 +494,7 @@ export const translations: Record<string, Translation> = {
     getStarted: 'Commencer',
     learnMore: 'En Savoir Plus',
     seeHowItWorks: 'Voir Comment Ça Marche',
+    talkToSales: 'Parler aux Ventes',
     
     // Features Section
     featuresTitle: 'Tout ce dont Vous Avez Besoin pour Livrer Rapidement',
@@ -644,6 +648,7 @@ export const translations: Record<string, Translation> = {
     getStarted: 'Loslegen',
     learnMore: 'Mehr Erfahren',
     seeHowItWorks: 'Sehen Sie, Wie Es Funktioniert',
+    talkToSales: 'Kontaktieren Sie den Vertrieb',
     
     // Features Section
     featuresTitle: 'Alles was Sie für Schnelle Übertragung Brauchen',
@@ -797,6 +802,7 @@ export const translations: Record<string, Translation> = {
     getStarted: '始める',
     learnMore: '詳細を見る',
     seeHowItWorks: '仕組みを見る',
+    talkToSales: '営業に相談する',
     
     // Features Section
     featuresTitle: '高速配信に必要なすべて',
@@ -950,6 +956,7 @@ export const translations: Record<string, Translation> = {
     getStarted: '开始使用',
     learnMore: '了解更多',
     seeHowItWorks: '查看工作原理',
+    talkToSales: '联系销售',
     
     // Features Section
     featuresTitle: '快速传输所需的一切',
@@ -1103,6 +1110,7 @@ export const translations: Record<string, Translation> = {
     getStarted: 'Bắt đầu',
     learnMore: 'Tìm hiểu thêm',
     seeHowItWorks: 'Xem cách hoạt động',
+    talkToSales: 'Liên hệ với bộ phận bán hàng',
     
     // Features Section
     featuresTitle: 'Mọi thứ bạn cần để phân phối nhanh chóng',
