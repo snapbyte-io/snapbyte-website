@@ -10,7 +10,7 @@ interface PricingCalculatorSectionProps {
 export default function PricingCalculatorSection({ plans }: PricingCalculatorSectionProps) {
   const { t } = useLanguage();
   const [activeTab, setActiveTab] = useState<'pro' | 'enterprise'>('pro');
-  const [amount, setAmount] = useState(100);
+  const [amount, setAmount] = useState(10);
   const [unit, setUnit] = useState<'GB' | 'TB'>('GB');
 
   // Get the active plan
@@ -28,9 +28,9 @@ export default function PricingCalculatorSection({ plans }: PricingCalculatorSec
     const total = bandwidthCost + storageCost;
 
     return {
-      bandwidthCost: Math.round(bandwidthCost).toString(),
-      storageCost: Math.round(storageCost).toString(),
-      total: Math.round(total).toString()
+      bandwidthCost: bandwidthCost.toFixed(2),
+      storageCost: storageCost.toFixed(2),
+      total: total.toFixed(2)
     };
   }, [amount, unit, activePlan]);
 
@@ -42,22 +42,22 @@ export default function PricingCalculatorSection({ plans }: PricingCalculatorSec
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6" data-i18n="calculator">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
               {t.calculator}
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300" data-i18n="calculatorDescription">
+            <p className="text-xl text-gray-600 dark:text-gray-300">
               {t.calculatorDescription}
             </p>
           </div>
 
           {/* Plan Tabs */}
           <div className="flex justify-center mb-8">
-            <div className="bg-gray-100 dark:bg-gray-800 p-1 rounded-lg">
+            <div className="bg-gray-100 dark:bg-gray-800 p-2 rounded-lg gap-2 flex">
               {paidPlans.map((plan) => (
                 <button
                   key={plan.id}
                   onClick={() => setActiveTab(plan.id as 'pro' | 'enterprise')}
-                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 p-2 ${
                     plan.id === activeTab
                       ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white'
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
@@ -76,7 +76,7 @@ export default function PricingCalculatorSection({ plans }: PricingCalculatorSec
               <div className="space-y-6">
                 {/* Unit selector */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3" data-i18n="selectUnit">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
                     {t.selectUnit}
                   </label>
                   <div className="flex space-x-4">
@@ -87,7 +87,6 @@ export default function PricingCalculatorSection({ plans }: PricingCalculatorSec
                           ? 'bg-blue-500 text-white shadow-md'
                           : 'bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-600'
                       }`}
-                      data-i18n="gb"
                     >
                       {t.gb}
                     </button>
@@ -98,7 +97,6 @@ export default function PricingCalculatorSection({ plans }: PricingCalculatorSec
                           ? 'bg-blue-500 text-white shadow-md'
                           : 'bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-600'
                       }`}
-                      data-i18n="tb"
                     >
                       {t.tb}
                     </button>
@@ -107,7 +105,7 @@ export default function PricingCalculatorSection({ plans }: PricingCalculatorSec
 
                 {/* Amount slider */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3" data-i18n="dataAmount">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
                     {t.dataAmount}
                   </label>
                   <div className="mb-4">
@@ -117,7 +115,7 @@ export default function PricingCalculatorSection({ plans }: PricingCalculatorSec
                     <input
                       type="range"
                       min={unit === 'GB' ? 10 : 1}
-                      max={unit === 'GB' ? 1000 : 100}
+                      max={1000}
                       step={unit === 'GB' ? 10 : 1}
                       value={amount}
                       onChange={(e) => setAmount(parseInt(e.target.value))}
@@ -125,7 +123,7 @@ export default function PricingCalculatorSection({ plans }: PricingCalculatorSec
                     />
                     <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-2">
                       <span>{unit === 'GB' ? '10 GB' : '1 TB'}</span>
-                      <span>{unit === 'GB' ? '1000 GB' : '100 TB'}</span>
+                      <span>{unit === 'GB' ? '1000 GB' : '1000 TB'}</span>
                     </div>
                   </div>
                 </div>
@@ -139,7 +137,7 @@ export default function PricingCalculatorSection({ plans }: PricingCalculatorSec
                 
                 <div className="space-y-4">
                   <div className="flex justify-between items-center py-3 border-b border-gray-200 dark:border-gray-600">
-                    <span className="text-gray-600 dark:text-gray-300" data-i18n="monthlyBandwidthCost">
+                    <span className="text-gray-600 dark:text-gray-300">
                       {t.monthlyBandwidthCost}
                     </span>
                     <span className="font-semibold text-gray-900 dark:text-white text-lg">
@@ -149,7 +147,7 @@ export default function PricingCalculatorSection({ plans }: PricingCalculatorSec
                   
                   {activePlan?.storagePrice && (
                     <div className="flex justify-between items-center py-3 border-b border-gray-200 dark:border-gray-600">
-                      <span className="text-gray-600 dark:text-gray-300" data-i18n="monthlyStorageCost">
+                      <span className="text-gray-600 dark:text-gray-300">
                         {t.monthlyStorageCost}
                       </span>
                       <span className="font-semibold text-gray-900 dark:text-white text-lg">
@@ -159,7 +157,7 @@ export default function PricingCalculatorSection({ plans }: PricingCalculatorSec
                   )}
                   
                   <div className="flex justify-between items-center py-4 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg px-4 mt-4">
-                    <span className="text-lg font-semibold text-gray-900 dark:text-white" data-i18n="totalMonthlyCost">
+                    <span className="text-lg font-semibold text-gray-900 dark:text-white">
                       {t.totalMonthlyCost}
                     </span>
                     <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">
@@ -172,7 +170,6 @@ export default function PricingCalculatorSection({ plans }: PricingCalculatorSec
                     <a 
                       href={activeTab === 'enterprise' ? '/contact' : 'https://app.snapbyte.io/auth/register'}
                       className="block w-full text-center py-3 px-6 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-                      data-i18n={activeTab === 'enterprise' ? 'contactSales' : 'getStartedFree'}
                     >
                       {activeTab === 'enterprise' ? t.contactSales : t.getStartedFree}
                     </a>
