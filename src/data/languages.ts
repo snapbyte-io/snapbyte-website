@@ -363,7 +363,7 @@ export const translations: Record<string, Translation> = {
     contact: 'Contacto',
     
     // Hero Section
-    heroTitle: 'Entrega de Archivos Ultra Rápida',
+    heroTitle: 'Snapbyte.',
     heroSubtitle: 'Para Aplicaciones Modernas',
     heroDescription: 'Optimiza, transforma y entrega archivos a escala con nuestro CDN inteligente. Construido para desarrolladores que exigen rendimiento.',
     getStarted: 'Comenzar',
@@ -532,7 +532,7 @@ export const translations: Record<string, Translation> = {
     contact: 'Contact',
     
     // Hero Section
-    heroTitle: 'Livraison de Fichiers Ultra-Rapide',
+    heroTitle: 'Snapbyte.',
     heroSubtitle: 'Pour Applications Modernes',
     heroDescription: 'Optimisez, transformez et livrez des fichiers à grande échelle avec notre CDN intelligent. Conçu pour les développeurs qui exigent la performance.',
     getStarted: 'Commencer',
@@ -699,7 +699,7 @@ export const translations: Record<string, Translation> = {
     contact: 'Kontakt',
     
     // Hero Section
-    heroTitle: 'Blitzschnelle Datei-Übertragung',
+    heroTitle: 'Snapbyte.',
     heroSubtitle: 'Für Moderne Anwendungen',
     heroDescription: 'Optimieren, transformieren und übertragen Sie Dateien im großen Maßstab mit unserem intelligenten CDN. Entwickelt für Entwickler, die Leistung verlangen.',
     getStarted: 'Loslegen',
@@ -866,7 +866,7 @@ export const translations: Record<string, Translation> = {
     contact: 'お問い合わせ',
     
     // Hero Section
-    heroTitle: '超高速ファイル配信',
+    heroTitle: 'Snapbyte.',
     heroSubtitle: 'モダンアプリケーション向け',
     heroDescription: 'インテリジェントCDNでファイルを大規模に最適化、変換、配信。パフォーマンスを求める開発者のために構築。',
     getStarted: '始める',
@@ -1033,7 +1033,7 @@ export const translations: Record<string, Translation> = {
     contact: '联系我们',
     
     // Hero Section
-    heroTitle: '闪电般的文件传输',
+    heroTitle: 'Snapbyte.',
     heroSubtitle: '为现代应用而生',
     heroDescription: '使用我们的智能CDN大规模优化、转换和传输文件。专为追求性能的开发者打造。',
     getStarted: '开始使用',
