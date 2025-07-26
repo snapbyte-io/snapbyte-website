@@ -12,21 +12,68 @@ function createThemeToggle() {
     const container = document.getElementById(containerId);
     if (!container) return;
     
-    // Create theme toggle button
-    const themeToggle = document.createElement('button');
-    themeToggle.className = 'p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-all duration-200';
-    themeToggle.setAttribute('aria-label', 'Toggle theme');
-    themeToggle.innerHTML = `
-      <svg class="w-5 h-5 block dark:hidden" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"/>
-      </svg>
-      <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"/>
-      </svg>
-    `;
+    // Create theme toggle switch container
+    const switchContainer = document.createElement('label');
+    switchContainer.className = 'relative inline-flex items-center cursor-pointer';
     
-    themeToggle.addEventListener('click', toggleTheme);
-    container.appendChild(themeToggle);
+    // Create hidden checkbox input
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.className = 'sr-only';
+    checkbox.setAttribute('aria-label', 'Toggle theme');
+    
+    // Check if current theme is dark
+    const isDark = document.documentElement.classList.contains('dark');
+    checkbox.checked = isDark;
+    
+    // Create switch track
+    const switchTrack = document.createElement('div');
+    switchTrack.className = 'relative w-10 h-5 bg-gray-200 dark:bg-gray-700 rounded-full transition-all duration-300 focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-1 shadow-inner';
+    
+    // Create switch thumb
+    const switchThumb = document.createElement('div');
+    switchThumb.className = `absolute top-0.5 left-0.5 w-4 h-4 bg-white rounded-full transition-all duration-300 shadow-md ${
+      isDark ? 'translate-x-5 bg-blue-500' : 'translate-x-0'
+    }`;
+    
+    // Add icon to the thumb
+    const thumbIcon = document.createElement('div');
+    thumbIcon.className = 'absolute inset-0 flex items-center justify-center';
+    thumbIcon.innerHTML = isDark 
+      ? `<svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+           <path d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"/>
+         </svg>`
+      : `<svg class="w-3 h-3 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+           <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"/>
+         </svg>`;
+    
+    // Assemble the switch
+    switchThumb.appendChild(thumbIcon);
+    switchTrack.appendChild(switchThumb);
+    switchContainer.appendChild(checkbox);
+    switchContainer.appendChild(switchTrack);
+    
+    // Add event listener
+    checkbox.addEventListener('change', function() {
+      toggleTheme();
+      
+      // Update switch visual state
+      const newIsDark = document.documentElement.classList.contains('dark');
+      switchThumb.className = `absolute top-0.5 left-0.5 w-4 h-4 bg-white rounded-full transition-all duration-300 shadow-md ${
+        newIsDark ? 'translate-x-5 bg-blue-500' : 'translate-x-0'
+      }`;
+      
+      // Update thumb icon
+      thumbIcon.innerHTML = newIsDark 
+        ? `<svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+             <path d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"/>
+           </svg>`
+        : `<svg class="w-3 h-3 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+             <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"/>
+           </svg>`;
+    });
+    
+    container.appendChild(switchContainer);
   });
 }
 
