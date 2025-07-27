@@ -31,7 +31,7 @@ Getting started with Snapbyte is incredibly straightforward. Let's walk through 
 
 ### 1. Create Your Account
 
-First, sign up for a free Snapbyte account at [app.snapbyte.com](https://app.snapbyte.com/signup). No credit card required!
+First, sign up for a free Snapbyte account at [app.snapbyte.io](https://app.snapbyte.io/signup). No credit card required!
 
 ### 2. Get Your API Key
 
@@ -184,8 +184,8 @@ Now that you've got the basics down, here are some areas to explore:
 
 Snapbyte makes it incredibly easy to deliver fast, optimized files to your users worldwide. With just a few lines of code, you can dramatically improve your site's performance and user experience.
 
-Ready to get started? [Sign up for your free account](https://app.snapbyte.com/signup) and start delivering lightning-fast files today!
+Ready to get started? [Sign up for your free account](https://app.snapbyte.io/signup) and start delivering lightning-fast files today!
 
 ---
 
-*Have questions about getting started with Snapbyte? [Contact our support team](mailto:support@snapbyte.com) or join our [developer community](https://discord.gg/snapbyte) for help and tips.*
+*Have questions about getting started with Snapbyte? [Contact our support team](mailto:support@snapbyte.io) or join our [developer community](https://discord.gg/snapbyte) for help and tips.*

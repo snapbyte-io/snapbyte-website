@@ -261,4 +261,4 @@ If you're tired of complex CDN configurations and want to focus on building grea
 
 ---
 
-*Ready to make the switch? [Start your free trial](https://app.snapbyte.com/signup) today and experience the difference for yourself.*
+*Ready to make the switch? [Start your free trial](https://app.snapbyte.io/signup) today and experience the difference for yourself.*

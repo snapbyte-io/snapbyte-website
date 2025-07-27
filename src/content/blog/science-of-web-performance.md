@@ -329,4 +329,4 @@ Remember: **Performance is a feature, not an afterthought.** The companies that 
 
 ---
 
-*Want to implement cutting-edge performance optimization in your application? [Try Snapbyte](https://app.snapbyte.com/signup) and experience the difference intelligent optimization can make.*
+*Want to implement cutting-edge performance optimization in your application? [Try Snapbyte](https://app.snapbyte.io/signup) and experience the difference intelligent optimization can make.*

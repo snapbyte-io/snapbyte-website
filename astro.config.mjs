@@ -9,6 +9,6 @@ export default defineConfig({
     react(),
     tailwind()
   ],
-  site: 'https://snapbyte.com',
+  site: 'https://snapbyte.io',
   trailingSlash: 'ignore'
 });
