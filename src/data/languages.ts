@@ -175,7 +175,11 @@ export interface Translation {
   selectUnit: string;
   gb: string;
   tb: string;
+  pb: string;
   dataAmount: string;
+  dataStograge: string;
+  dataBandwidth: string;
+  dataTransfer: string;
   monthlyBandwidthCost: string;
   monthlyStorageCost: string;
   totalMonthlyCost: string;
@@ -325,15 +329,15 @@ export const translations: Record<string, Translation> = {
     proDescription: 'Ideal for high-volume or time-sensitive content',
     proCacheLifetime: 'Files are cached for up to 30 days',
     proAutoExtension: 'Auto-extension: If a file is frequently accessed, its cache lifetime is automatically extended',
-    proBandwidthPrice: 'Bandwidth: $0.003 per GB per month',
-    
+    proBandwidthPrice: 'Data Transfer: $2990 per PB/month',
+
     enterprisePlan: 'Enterprise Plan',
     enterpriseDescription: 'Best for critical assets requiring long-term availability',
     enterpriseCacheLifetime: 'Files are cached indefinitely',
     enterpriseAutoExtension: 'Guaranteed persistent caching',
     enterpriseStorageFees: 'Storage fee included',
-    enterpriseBandwidthPrice: 'Bandwidth: $0.003 per GB per month',
-    enterpriseStoragePrice: 'Storage: $0.007 per GB per month',
+    enterpriseBandwidthPrice: 'Data Transfer: $2990 per PB/month',
+    enterpriseStoragePrice: 'Storage: $7 per TB/month',
     enterpriseNote: '⚠️ Note: Although files are cached permanently, Snapbyte is a data caching system — it should not be used as a primary or long-term storage location.',
     
     noStorageFees: 'No storage fees',
@@ -362,10 +366,14 @@ export const translations: Record<string, Translation> = {
     selectUnit: 'Select unit',
     gb: 'GB',
     tb: 'TB',
+    pb: 'PB',
     dataAmount: 'Data amount',
+    dataStograge: 'Storage',
+    dataBandwidth: 'Bandwidth',
+    dataTransfer: 'Data Transfer',
     monthlyBandwidthCost: 'Monthly bandwidth cost',
     monthlyStorageCost: 'Monthly storage cost',
-    totalMonthlyCost: 'Total monthly cost',
+    totalMonthlyCost: 'Total',
   },
   es: {
     // Navigation
@@ -501,15 +509,15 @@ export const translations: Record<string, Translation> = {
     proDescription: 'Ideal para contenido de alto volumen o crítico en el tiempo',
     proCacheLifetime: 'Los archivos se almacenan en caché hasta 30 días',
     proAutoExtension: 'Extensión automática: Si un archivo se accede frecuentemente, su tiempo de caché se extiende automáticamente',
-    proBandwidthPrice: 'Ancho de banda: $0.003 por GB por mes',
-    
+    proBandwidthPrice: 'Transferencia de datos: $2990 por PB/mes',
+
     enterprisePlan: 'Plan Enterprise',
     enterpriseDescription: 'Mejor para recursos críticos que requieren disponibilidad a largo plazo',
     enterpriseCacheLifetime: 'Los archivos se almacenan en caché indefinidamente',
     enterpriseAutoExtension: 'Caché persistente garantizado',
     enterpriseStorageFees: 'Tarifa de almacenamiento incluida',
-    enterpriseBandwidthPrice: 'Ancho de banda: $0.003 por GB por mes',
-    enterpriseStoragePrice: 'Almacenamiento: $0.007 por GB por mes',
+    enterpriseBandwidthPrice: 'Transferencia de datos: $2990 por PB/mes',
+    enterpriseStoragePrice: 'Almacenamiento: $7 por TB/mes',
     enterpriseNote: '⚠️ Nota: Aunque los archivos se almacenan permanentemente en caché, Snapbyte es un sistema de caché de datos: no debe usarse como ubicación de almacenamiento primaria o a largo plazo.',
     
     noStorageFees: 'Sin tarifas de almacenamiento',
@@ -538,10 +546,14 @@ export const translations: Record<string, Translation> = {
     selectUnit: 'Seleccionar unidad',
     gb: 'GB',
     tb: 'TB',
+    pb: 'PB',
     dataAmount: 'Cantidad de datos',
+    dataStograge: 'Almacenamiento',
+    dataBandwidth: 'Ancho de banda',
+    dataTransfer: 'Transferencia de datos',
     monthlyBandwidthCost: 'Costo mensual de ancho de banda',
     monthlyStorageCost: 'Costo mensual de almacenamiento',
-    totalMonthlyCost: 'Costo total mensual',
+    totalMonthlyCost: 'Costo total',
   },
   fr: {
     // Navigation
@@ -675,15 +687,15 @@ export const translations: Record<string, Translation> = {
     proDescription: 'Idéal pour du contenu à fort volume ou sensible au temps',
     proCacheLifetime: 'Les fichiers sont mis en cache jusqu\'à 30 jours',
     proAutoExtension: 'Extension automatique : Si un fichier est fréquemment accédé, sa durée de cache est automatiquement étendue',
-    proBandwidthPrice: 'Bande passante : 0,003$ par GB par mois',
+    proBandwidthPrice: 'Bande passante : 2990$ par PB/mois',
     
     enterprisePlan: 'Plan Enterprise',
     enterpriseDescription: 'Meilleur pour les ressources critiques nécessitant une disponibilité à long terme',
     enterpriseCacheLifetime: 'Les fichiers sont mis en cache indéfiniment',
     enterpriseAutoExtension: 'Cache persistant garanti',
     enterpriseStorageFees: 'Frais de stockage inclus',
-    enterpriseBandwidthPrice: 'Bande passante : 0,003$ par GB par mois',
-    enterpriseStoragePrice: 'Stockage : 0,007$ par GB par mois',
+    enterpriseBandwidthPrice: 'Bande passante : 2990$ par PB/mois',
+    enterpriseStoragePrice: 'Stockage : 7$ par TB/mois',
     enterpriseNote: '⚠️ Note : Bien que les fichiers soient mis en cache de manière permanente, Snapbyte est un système de mise en cache de données — il ne doit pas être utilisé comme emplacement de stockage principal ou à long terme.',
     
     noStorageFees: 'Pas de frais de stockage',
@@ -712,10 +724,14 @@ export const translations: Record<string, Translation> = {
     selectUnit: 'Sélectionner l\'unité',
     gb: 'GB',
     tb: 'TB',
+    pb: 'PB',
+    dataStograge: 'Stockage',
+    dataBandwidth: 'Bande passante',
+    dataTransfer: 'Transfert de données',
     dataAmount: 'Quantité de données',
     monthlyBandwidthCost: 'Coût mensuel de bande passante',
     monthlyStorageCost: 'Coût mensuel de stockage',
-    totalMonthlyCost: 'Coût total mensuel',
+    totalMonthlyCost: 'Coût total',
   },
   de: {
     // Navigation
@@ -849,15 +865,15 @@ export const translations: Record<string, Translation> = {
     proDescription: 'Ideal für hochvolumige oder zeitkritische Inhalte',
     proCacheLifetime: 'Dateien werden bis zu 30 Tage zwischengespeichert',
     proAutoExtension: 'Automatische Verlängerung: Wenn auf eine Datei häufig zugegriffen wird, wird ihre Cache-Lebensdauer automatisch verlängert',
-    proBandwidthPrice: 'Bandbreite: 0,003$ pro GB pro Monat',
-    
+    proBandwidthPrice: 'Datenübertragung: 2990$ pro PB/Monat',
+
     enterprisePlan: 'Enterprise Plan',
     enterpriseDescription: 'Am besten für kritische Assets, die langfristige Verfügbarkeit erfordern',
     enterpriseCacheLifetime: 'Dateien werden unbegrenzt zwischengespeichert',
     enterpriseAutoExtension: 'Garantierte persistente Zwischenspeicherung',
     enterpriseStorageFees: 'Speichergebühr inbegriffen',
-    enterpriseBandwidthPrice: 'Bandbreite: 0,003$ pro GB pro Monat',
-    enterpriseStoragePrice: 'Speicher: 0,007$ pro GB pro Monat',
+    enterpriseBandwidthPrice: 'Datenübertragung: 2990$ pro PB/Monat',
+    enterpriseStoragePrice: 'Speicher: 7$ pro TB/Monat',
     enterpriseNote: '⚠️ Hinweis: Obwohl Dateien dauerhaft zwischengespeichert werden, ist Snapbyte ein Daten-Cache-System — es sollte nicht als primärer oder langfristiger Speicherort verwendet werden.',
     
     noStorageFees: 'Keine Speichergebühren',
@@ -886,10 +902,14 @@ export const translations: Record<string, Translation> = {
     selectUnit: 'Einheit auswählen',
     gb: 'GB',
     tb: 'TB',
+    pb: 'PB',
+    dataStograge: 'Speicher',
+    dataBandwidth: 'Bandbreite',
+    dataTransfer: 'Datenübertragung',
     dataAmount: 'Datenmenge',
     monthlyBandwidthCost: 'Monatliche Bandbreitenkosten',
     monthlyStorageCost: 'Monatliche Speicherkosten',
-    totalMonthlyCost: 'Gesamte monatliche Kosten',
+    totalMonthlyCost: 'Gesamte Kosten',
   },
   ja: {
     // Navigation
@@ -1023,15 +1043,15 @@ export const translations: Record<string, Translation> = {
     proDescription: '大容量または時間が重要なコンテンツに最適',
     proCacheLifetime: 'ファイルは最大30日間キャッシュされます',
     proAutoExtension: '自動延長：ファイルが頻繁にアクセスされる場合、キャッシュの寿命が自動的に延長されます',
-    proBandwidthPrice: '帯域幅：月額GB当たり$0.003',
-    
+    proBandwidthPrice: 'データ転送：月額PB当たり$2990',
+
     enterprisePlan: 'エンタープライズプラン',
     enterpriseDescription: '長期的な可用性が必要な重要なアセットに最適',
     enterpriseCacheLifetime: 'ファイルは無期限にキャッシュされます',
     enterpriseAutoExtension: '永続的キャッシュ保証',
     enterpriseStorageFees: 'ストレージ料金込み',
-    enterpriseBandwidthPrice: '帯域幅：月額GB当たり$0.003',
-    enterpriseStoragePrice: 'ストレージ：月額GB当たり$0.007',
+    enterpriseBandwidthPrice: 'データ転送：月額PB当たり$2990',
+    enterpriseStoragePrice: 'ストレージ：月額TB当たり$7',
     enterpriseNote: '⚠️ 注意：ファイルは永続的にキャッシュされますが、Snapbyteはデータキャッシュシステムです — プライマリまたは長期ストレージ場所として使用すべきではありません。',
     
     noStorageFees: 'ストレージ料金なし',
@@ -1060,7 +1080,11 @@ export const translations: Record<string, Translation> = {
     selectUnit: '単位を選択',
     gb: 'GB',
     tb: 'TB',
+    pb: 'PB',
+    dataStograge: 'ストレージ',
+    dataBandwidth: '帯域幅',
     dataAmount: 'データ量',
+    dataTransfer: 'データ転送',
     monthlyBandwidthCost: '月額帯域幅コスト',
     monthlyStorageCost: '月額ストレージコスト',
     totalMonthlyCost: '月額総コスト',
@@ -1197,15 +1221,15 @@ export const translations: Record<string, Translation> = {
     proDescription: '适合高容量或时间敏感的内容',
     proCacheLifetime: '文件缓存时间最长30天',
     proAutoExtension: '自动延期：如果文件被频繁访问，其缓存生命周期会自动延长',
-    proBandwidthPrice: '带宽：每GB每月$0.003',
+    proBandwidthPrice: '带宽：每PB每月$2990',
     
     enterprisePlan: '企业计划',
     enterpriseDescription: '适合需要长期可用性的关键资产',
     enterpriseCacheLifetime: '文件无限期缓存',
     enterpriseAutoExtension: '保证持久缓存',
     enterpriseStorageFees: '存储费用已包含',
-    enterpriseBandwidthPrice: '带宽：每GB每月$0.003',
-    enterpriseStoragePrice: '存储：每GB每月$0.007',
+    enterpriseBandwidthPrice: '带宽：每PB每月$2990',
+    enterpriseStoragePrice: '存储：每TB每月$7',
     enterpriseNote: '⚠️ 注意：虽然文件被永久缓存，但Snapbyte是一个数据缓存系统——不应用作主要或长期存储位置。',
     
     noStorageFees: '无存储费用',
@@ -1234,7 +1258,11 @@ export const translations: Record<string, Translation> = {
     selectUnit: '选择单位',
     gb: 'GB',
     tb: 'TB',
+    pb: 'PB',
+    dataStograge: '存储',
+    dataBandwidth: '带宽',
     dataAmount: '数据量',
+    dataTransfer: '数据传输',
     monthlyBandwidthCost: '月度带宽费用',
     monthlyStorageCost: '月度存储费用',
     totalMonthlyCost: '月度总费用',
@@ -1371,15 +1399,15 @@ export const translations: Record<string, Translation> = {
     proDescription: 'Lý tưởng cho nội dung có lưu lượng truy cập cao hoặc nhạy cảm về thời gian',
     proCacheLifetime: 'Tệp được lưu vào bộ nhớ đệm lên đến 30 ngày',
     proAutoExtension: 'Tự động gia hạn: Nếu một tệp được truy cập thường xuyên, thời gian tồn tại trong bộ đệm của nó sẽ được tự động gia hạn',
-    proBandwidthPrice: 'Băng thông: $0.003 mỗi GB mỗi tháng',
-    
+    proBandwidthPrice: 'Băng thông: $2990 mỗi PB/tháng',
+
     enterprisePlan: 'Gói Doanh nghiệp',
     enterpriseDescription: 'Tốt nhất cho các tài sản quan trọng yêu cầu tính sẵn sàng dài hạn',
     enterpriseCacheLifetime: 'Tệp được lưu vào bộ nhớ đệm vô thời hạn',
     enterpriseAutoExtension: 'Đảm bảo lưu trữ đệm liên tục',
     enterpriseStorageFees: 'Phí lưu trữ đã bao gồm',
-    enterpriseBandwidthPrice: 'Băng thông: $0.003 mỗi GB mỗi tháng',
-    enterpriseStoragePrice: 'Lưu trữ: $0.007 mỗi GB mỗi tháng',
+    enterpriseBandwidthPrice: 'Băng thông: $2990 mỗi PB/tháng',
+    enterpriseStoragePrice: 'Lưu trữ: $7 mỗi TB/tháng',
     enterpriseNote: '⚠️ Lưu ý: Mặc dù các tệp được lưu vào bộ nhớ đệm vĩnh viễn, Snapbyte là một hệ thống lưu trữ đệm dữ liệu — không nên sử dụng nó làm nơi lưu trữ chính hoặc lâu dài.',
     
     noStorageFees: 'Không có phí lưu trữ',
@@ -1408,10 +1436,14 @@ export const translations: Record<string, Translation> = {
     selectUnit: 'Chọn đơn vị',
     gb: 'GB',
     tb: 'TB',
+    pb: 'PB',
+    dataStograge: 'Lưu trữ',
+    dataBandwidth: 'Băng thông',
     dataAmount: 'Lượng dữ liệu',
+    dataTransfer: 'Chuyển dữ liệu',
     monthlyBandwidthCost: 'Chi phí băng thông hàng tháng',
     monthlyStorageCost: 'Chi phí lưu trữ hàng tháng',
-    totalMonthlyCost: 'Tổng chi phí hàng tháng',
+    totalMonthlyCost: 'Tổng chi phí',
   }
 };
 

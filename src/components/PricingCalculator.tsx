@@ -4,13 +4,14 @@ import { useLanguage } from './ThemeLanguageProvider';
 
 interface PricingCalculatorSectionProps {
   plans: PricingPlan[];
-  translations: any; // Keep for compatibility but we'll use useLanguage instead
+  translations: any;
 }
 
 export default function PricingCalculatorSection({ plans }: PricingCalculatorSectionProps) {
   const { t } = useLanguage();
   const [activeTab, setActiveTab] = useState<'pro' | 'enterprise'>('pro');
-  const [amount, setAmount] = useState(10);
+  const [amountBandwidth, setAmountBandwidth] = useState(10);
+  const [amountStorage, setAmountStorage] = useState(1024);
   const [unit, setUnit] = useState<'GB' | 'TB'>('GB');
 
   // Get the active plan
@@ -21,18 +22,27 @@ export default function PricingCalculatorSection({ plans }: PricingCalculatorSec
     if (!activePlan) return { bandwidthCost: '0', storageCost: '0', total: '0' };
 
     // Convert to GB for calculation
-    const amountInGB = unit === 'TB' ? amount * 1024 : amount;
+    const amountBandwidthInGB = unit === 'TB' ? amountBandwidth * 1024 : amountBandwidth;
+    const bandwidthPricePerGB = (activePlan.bandwidthPrice ?? 0) / (1024 * 1024);
 
-    const bandwidthCost = (activePlan.bandwidthPrice || 0) * amountInGB;
-    const storageCost = activePlan.storagePrice ? activePlan.storagePrice * amountInGB : 0;
+    const amountStorageInGB = unit === 'TB' ? amountStorage * 1024 : amountStorage;
+    const storagePricePerGB = activePlan.storagePrice ? activePlan.storagePrice / 1024 : 0;
+
+    const bandwidthCost = bandwidthPricePerGB * amountBandwidthInGB;
+    const storageCost = storagePricePerGB * amountStorageInGB;
     const total = bandwidthCost + storageCost;
 
+    function formatCost(value: number) {
+      const rounded = Number(value).toFixed(2);
+      return rounded.endsWith('.00') ? parseInt(rounded).toString() : rounded;
+    }
+
     return {
-      bandwidthCost: bandwidthCost.toFixed(2),
-      storageCost: storageCost.toFixed(2),
-      total: total.toFixed(2)
+      bandwidthCost: formatCost(bandwidthCost),
+      storageCost: formatCost(storageCost),
+      total: formatCost(total)
     };
-  }, [amount, unit, activePlan]);
+  }, [amountBandwidth, amountStorage, unit, activePlan]);
 
   if (paidPlans.length === 0) return null;
 
@@ -57,7 +67,7 @@ export default function PricingCalculatorSection({ plans }: PricingCalculatorSec
               <button
                 key={plan.id}
                 onClick={() => setActiveTab(plan.id as 'pro' | 'enterprise')}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 p-2 ${plan.id === activeTab
+                className={`px-3 py-3 rounded-lg font-semibold transition-all duration-300 p-2 ${plan.id === activeTab
                     ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white'
                     : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
                   }`}
@@ -69,7 +79,7 @@ export default function PricingCalculatorSection({ plans }: PricingCalculatorSec
         </div>
 
         {/* Calculator */}
-        <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
+        <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-4 lg:p-8 border border-gray-200 dark:border-gray-700">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Controls */}
             <div className="space-y-6">
@@ -103,33 +113,57 @@ export default function PricingCalculatorSection({ plans }: PricingCalculatorSec
               {/* Amount slider */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
-                  {t.dataAmount}
+                  {t.dataTransfer}
                 </label>
                 <div className="mb-4">
                   <div className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-                    {amount} {unit}
+                    {amountBandwidth} {unit}
                   </div>
                   <input
                     type="range"
                     min={unit === 'GB' ? 10 : 1}
-                    max={1000}
-                    step={unit === 'GB' ? 10 : 1}
-                    value={amount}
-                    onChange={(e) => setAmount(parseInt(e.target.value))}
+                    max={1024}
+                    step={1}
+                    value={amountBandwidth}
+                    onChange={(e) => setAmountBandwidth(parseInt(e.target.value))}
                     className="w-full h-3 bg-gray-200 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer slider"
                   />
                   <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-2">
                     <span>{unit === 'GB' ? '10 GB' : '1 TB'}</span>
-                    <span>{unit === 'GB' ? '1000 GB' : '1000 TB'}</span>
+                    <span>{unit === 'GB' ? '1 TB' : '1 PB'}</span>
                   </div>
                 </div>
               </div>
+              {/* Amount Storage slider */}
+              {activeTab === 'enterprise' && <div>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
+                  {t.dataStograge}
+                </label>
+                <div className="mb-4">
+                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+                    {amountStorage} {unit}
+                  </div>
+                  <input
+                    type="range"
+                    min={1}
+                    max={1024}
+                    step={1}
+                    value={amountStorage}
+                    onChange={(e) => setAmountStorage(parseInt(e.target.value))}
+                    className="w-full h-3 bg-gray-200 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer slider"
+                  />
+                  <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-2">
+                    <span>{unit === 'GB' ? '1 GB' : '1 TB'}</span>
+                    <span>{unit === 'GB' ? '1 TB' : '1 PB'}</span>
+                  </div>
+                </div>
+              </div>}
             </div>
 
             {/* Cost breakdown */}
-            <div className="bg-white dark:bg-gray-700 rounded-xl p-6 border border-gray-200 dark:border-gray-600">
+            <div className="bg-white dark:bg-gray-700 rounded-xl p-4 lg:p-6 border border-gray-200 dark:border-gray-600">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-6">
-                {(t as any)[`${activeTab}Plan`] || `${activeTab} Plan`} - Monthly Cost
+                {(t as any)[`${activeTab}Plan`] || `${activeTab} Plan`}
               </h3>
 
               <div className="space-y-4">
@@ -157,8 +191,8 @@ export default function PricingCalculatorSection({ plans }: PricingCalculatorSec
                   <span className="text-lg font-semibold text-gray-900 dark:text-white">
                     {t.totalMonthlyCost}
                   </span>
-                  <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                    ${calculations.total}
+                  <span className="text-2xl text-blue-600 dark:text-blue-400">
+                    <strong>${calculations.total}</strong>{t.perMonth}
                   </span>
                 </div>
 

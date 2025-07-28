@@ -20,6 +20,6 @@ export const customers: CustomerReview[] = [
         logo: samfwLogo,
         bandwidthPBPerMonth: 1.5,
         storageTB: 900,
-        satisfactionNote: "We have been using Snapbyte's services. Very satisfied with the performance and support!",
+        satisfactionNote: "We have been using Snapbyte's services for 2 years. Very satisfied with the performance and support!",
     },
 ];

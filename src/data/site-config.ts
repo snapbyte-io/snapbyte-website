@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Snapbyte",
   description: "Effortless file caching, blazing-fast delivery.",
   url: "https://snapbyte.io",
-  ogImage: "https://snapbyte.io/og-image.jpg",
+  ogImage: "/images/snapbyte.png",
   links: {
     twitter: "https://x.com/snapbyte_io",
     github: "https://github.com/snapbyte-io",
