@@ -67,7 +67,7 @@ export const pricingPlans: PricingPlan[] = [
     autoExtension: "Auto-extension: If a file is frequently accessed, its cache lifetime is automatically extended",
     storageFeesKey: "noStorageFees",
     storageFees: "No storage fees",
-    bandwidthPriceKey: "proBandwidthPrice",
+    bandwidthPriceKey: "pbPerMonthDataTransfer",
     bandwidthPrice: 2990, // $2990 per PB per month
     popular: true,
     ctaKey: "getStartedFree",
@@ -94,9 +94,9 @@ export const pricingPlans: PricingPlan[] = [
     autoExtension: "Guaranteed persistent caching",
     storageFeesKey: "enterpriseStorageFees", 
     storageFees: "Storage fee included",
-    bandwidthPriceKey: "enterpriseBandwidthPrice",
+    bandwidthPriceKey: "pbPerMonthDataTransfer",
     bandwidthPrice: 2990, // $2990 per PB per month
-    storagePriceKey: "enterpriseStoragePrice",
+    storagePriceKey: "tbPerMonthStorage",
     storagePrice: 7, // $7 per TB per month
     specialNoteKey: "enterpriseNote",
     specialNote: "⚠️ Note: Although files are cached permanently, Snapbyte is a data caching system — it should not be used as a primary or long-term storage location.",

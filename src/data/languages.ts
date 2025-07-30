@@ -183,6 +183,8 @@ export interface Translation {
   monthlyBandwidthCost: string;
   monthlyStorageCost: string;
   totalMonthlyCost: string;
+  pbPerMonthDataTransfer: string;
+  tbPerMonthStorage: string;
 }
 
 export const languages: Language[] = [
@@ -374,6 +376,8 @@ export const translations: Record<string, Translation> = {
     monthlyBandwidthCost: 'Monthly bandwidth cost',
     monthlyStorageCost: 'Monthly storage cost',
     totalMonthlyCost: 'Total',
+    pbPerMonthDataTransfer: '1 PB/month Data Transfer',
+    tbPerMonthStorage: '1 TB/month Storage',
   },
   es: {
     // Navigation
@@ -554,6 +558,8 @@ export const translations: Record<string, Translation> = {
     monthlyBandwidthCost: 'Costo mensual de ancho de banda',
     monthlyStorageCost: 'Costo mensual de almacenamiento',
     totalMonthlyCost: 'Costo total',
+    pbPerMonthDataTransfer: '1 PB/mes Transferencia de Datos',
+    tbPerMonthStorage: '1 TB/mes Almacenamiento',
   },
   fr: {
     // Navigation
@@ -732,6 +738,8 @@ export const translations: Record<string, Translation> = {
     monthlyBandwidthCost: 'Coût mensuel de bande passante',
     monthlyStorageCost: 'Coût mensuel de stockage',
     totalMonthlyCost: 'Coût total',
+    pbPerMonthDataTransfer: '1 PB/mois Transfert de Données',
+    tbPerMonthStorage: '1 TB/mois Stockage',
   },
   de: {
     // Navigation
@@ -910,6 +918,8 @@ export const translations: Record<string, Translation> = {
     monthlyBandwidthCost: 'Monatliche Bandbreitenkosten',
     monthlyStorageCost: 'Monatliche Speicherkosten',
     totalMonthlyCost: 'Gesamte Kosten',
+    pbPerMonthDataTransfer: '1 PB/Monat Datenübertragung',
+    tbPerMonthStorage: '1 TB/Monat Speicher',
   },
   ja: {
     // Navigation
@@ -1088,6 +1098,8 @@ export const translations: Record<string, Translation> = {
     monthlyBandwidthCost: '月額帯域幅コスト',
     monthlyStorageCost: '月額ストレージコスト',
     totalMonthlyCost: '月額総コスト',
+    pbPerMonthDataTransfer: '1 PB/月のデータ転送',
+    tbPerMonthStorage: '1 TB/月のストレージ',
   },
   zh: {
     // Navigation
@@ -1266,6 +1278,8 @@ export const translations: Record<string, Translation> = {
     monthlyBandwidthCost: '月度带宽费用',
     monthlyStorageCost: '月度存储费用',
     totalMonthlyCost: '月度总费用',
+    pbPerMonthDataTransfer: '每月1 PB数据传输',
+    tbPerMonthStorage: '每月1 TB存储',
   },
   vi: {
     // Navigation
@@ -1444,6 +1458,8 @@ export const translations: Record<string, Translation> = {
     monthlyBandwidthCost: 'Chi phí băng thông hàng tháng',
     monthlyStorageCost: 'Chi phí lưu trữ hàng tháng',
     totalMonthlyCost: 'Tổng chi phí',
+    pbPerMonthDataTransfer: '1 PB chuyển dữ liệu/tháng',
+    tbPerMonthStorage: '1 TB lưu trữ/tháng',
   }
 };
 

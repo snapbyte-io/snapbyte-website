@@ -31,19 +31,19 @@ const t = getTranslation(currentLang);
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {pricingPlans.map((plan) => (
           <div class={`
-            relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg
-            ${plan.popular ? 'border-2 border-blue-500 p-0.5' : 'border border-gray-200 dark:border-gray-700 p-8'}
+            relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg flex flex-col h-full
+            ${plan.popular ? 'border-2 border-blue-500' : 'border border-gray-200 dark:border-gray-700 p-6'}
             ${plan.popular ? 'popular-card' : 'hover:shadow-xl'}
           `}>
             {plan.popular && (
               <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                <span class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold" data-i18n="mostPopular">
+                <span class="whitespace-nowrap bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold" data-i18n="mostPopular">
                   Most Popular
                 </span>
               </div>
             )}
             
-            <div class={plan.popular ? 'bg-white dark:bg-gray-800 rounded-2xl p-8' : ''}>
+            <div class={`${plan.popular ? 'bg-white dark:bg-gray-800 rounded-2xl p-6' : ''} flex flex-col h-full`}>
               <div class="text-center mb-8">
                 <div class="text-4xl mb-2">{plan.icon}</div>
                 <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2" data-i18n={`${plan.id}Plan`}>
@@ -54,31 +54,39 @@ const t = getTranslation(currentLang);
                 </p>
                 
                 <div class="mb-6">
-                  <div class="text-lg font-semibold text-gray-900 dark:text-white mb-2" data-i18n={`${plan.id}CacheLifetime`}>
-                    {plan.cacheLifetime}
-                  </div>
-                  <div class="text-sm text-gray-600 dark:text-gray-400" data-i18n={`${plan.id}AutoExtension`}>
+                  {plan.bandwidthPriceKey && (
+                    <div class="text-green-500 dark:text-green-400">                      
+                      <strong class="text-3xl mt-1">${plan.bandwidthPrice}</strong>
+                    </div>
+                    <div class="text-sm text-green-600 dark:text-green-400" data-i18n={plan.bandwidthPriceKey}></div>
+                  )}
+                  {plan.storagePriceKey && (
+                    <div class="text-orange-600 dark:text-orange-400 mt-2">                      
+                      <span class="text-2xl mx-1 font-bold">${plan.storagePrice}</span>
+                      <small class="text-sm text-orange-600 dark:text-orange-400" data-i18n={plan.storagePriceKey}></small>
+                    </div>                   
+                  )}
+                  {plan.id !== 'enterprise' ? 
+                    <div class="text-sm text-gray-600 dark:text-gray-400 mb-2" data-i18n="noStorageFees">
+                      No storage fees for this plan
+                    </div> : ''
+                  }
+                  <div class="text-sm text-gray-600 dark:text-gray-400 mt-2" data-i18n={`${plan.id}AutoExtension`}>
                     {plan.autoExtension}
                   </div>
+                  
                   {plan.id === 'trial' && (
                     <div class="text-sm text-blue-600 dark:text-blue-400 mt-2" data-i18n="trialBandwidthLimit">
                       {plan.bandwidth}
                     </div>
                   )}
-                  {plan.bandwidthPriceKey && (
-                    <div class="text-sm text-green-600 dark:text-green-400 mt-2" data-i18n={plan.bandwidthPriceKey}>
-                      {plan.bandwidthPrice}
-                    </div>
-                  )}
-                  {plan.storagePriceKey && (
-                    <div class="text-sm text-orange-600 dark:text-orange-400 mt-2" data-i18n={plan.storagePriceKey}>
-                      {plan.storagePrice}
-                    </div>
-                  )}
+                  <div class="mb-6 text-center">
+                  
+              </div>
                 </div>
               </div>
               
-              <ul class="space-y-4 mb-8">
+              <ul class="space-y-4 mb-4 flex-grow">
                 {plan.features.map((feature, index) => (
                   <li class="flex items-start">
                     <svg class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -98,13 +106,6 @@ const t = getTranslation(currentLang);
                   </p>
                 </div>
               )}
-              <div class="mb-6 text-center">
-                {plan.id !== 'enterprise' ? 
-                  <div class="text-sm text-gray-600 dark:text-gray-400 mb-2" data-i18n="noStorageFees">
-                    No storage fees for this plan
-                  </div> : ''
-                }
-              </div>
               
               {/* Calculator button for paid plans */}
               {plan.showCalculator && (
@@ -122,7 +123,7 @@ const t = getTranslation(currentLang);
               <a 
                 href={plan.id !== 'trial' ? '/contact' : 'https://app.snapbyte.io/auth/register'}
                 class={`
-                  block w-full text-center py-4 px-6 rounded-lg font-semibold
+                  block w-full text-center py-4 px-6 rounded-lg font-semibold mt-auto
                   ${plan.popular 
                     ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white hover:from-blue-600 hover:to-indigo-700 shadow-md hover:shadow-lg' 
                     : 'bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600'
