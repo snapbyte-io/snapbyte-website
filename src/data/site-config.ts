@@ -20,6 +20,10 @@ export const navigation = [
     href: "/pricing",
   },
   {
+    name: "docs",
+    href: "https://docs.snapbyte.io",
+  },
+  {
     name: "contact",
     href: "/contact",
   }

@@ -8,6 +8,7 @@ export interface TeamMember {
   role: string;
   image: { src: string };
   profileUrl?: string;
+  telegramUrl?: string;
 }
 
 export const team: TeamMember[] = [
@@ -16,6 +17,7 @@ export const team: TeamMember[] = [
     name: "Dat Nguyen",
     role: "Engineer, CEO & Co-founder",
     image: member1,
+    telegramUrl: "https://t.me/neokrypt",
     profileUrl: "https://www.linkedin.com/in/dat-nguyen-cse/",
   },
   {

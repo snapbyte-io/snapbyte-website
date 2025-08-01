@@ -64,7 +64,7 @@ export const pricingPlans: PricingPlan[] = [
     cacheLifetimeKey: "proCacheLifetime",
     cacheLifetime: "Files are cached for up to 30 days",
     autoExtensionKey: "proAutoExtension", 
-    autoExtension: "Auto-extension: If a file is frequently accessed, its cache lifetime is automatically extended",
+    autoExtension: "",
     storageFeesKey: "noStorageFees",
     storageFees: "No storage fees",
     bandwidthPriceKey: "pbPerMonthDataTransfer",

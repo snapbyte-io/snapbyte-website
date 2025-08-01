@@ -9,6 +9,7 @@ export interface Translation {
   home: string;
   features: string;
   pricing: string;
+  docs: string;
   about: string;
   blog: string;
   contact: string;
@@ -120,6 +121,12 @@ export interface Translation {
   faqAnswer2: string;
   faqQuestion3: string;
   faqAnswer3: string;
+  faqQuestion4: string;
+  faqAnswer4: string;
+  faqQuestion5: string;
+  faqAnswer5: string;
+  faqQuestion6: string;
+  faqAnswer6: string;
   
   // Footer & Legal
   navigation: string;
@@ -203,6 +210,7 @@ export const translations: Record<string, Translation> = {
     home: 'Home',
     features: 'Features',
     pricing: 'Pricing',
+    docs: 'Docs',
     about: 'About',
     blog: 'Blog',
     contact: 'Contact',
@@ -313,6 +321,12 @@ export const translations: Record<string, Translation> = {
     faqAnswer2: 'We\'ll notify you before you reach your limits. For storage and bandwidth, you can either upgrade your plan or purchase additional resources as needed.',
     faqQuestion3: 'Do you offer custom enterprise solutions?',
     faqAnswer3: 'Absolutely! Our Enterprise plan includes custom configurations, dedicated support, and can be tailored to meet specific compliance and performance requirements.',
+    faqQuestion4: 'Is there any storage limit or quota included in the plan?',
+    faqAnswer4: 'With our Pro Plan, there is no storage limit or quota. You can cache as much data as needed. Please note: files that haven\'t been downloaded in the past 30 days will be automatically purged to optimize resources. However, storage is free and you can re-cache any file at any time with no limitations.',
+    faqQuestion5: 'Are there any requirements or restrictions on the ratio between stored content and bandwidth usage?',
+    faqAnswer5: 'No, there are no such restrictions. Snapbyte is a data caching system, and we only charge based on actual bandwidth usage. In fact, we encourage high download activity. For low-access files, we apply the 30-day auto-purge policy mentioned above, but you\'re always free to request those files be cached again at any time.',
+    faqQuestion6: 'Do you have any usage guidelines or best practices for optimal caching efficiency?',
+    faqAnswer6: 'Snapbyte is still in its early stage, and while our documentation is evolving, you can find helpful information at: https://docs.snapbyte.io. We also offer free support and testing to help you get started. Feel free to reach out directly via Telegram to our co-founder: @neokrypt',
     
     // Footer & Legal
     navigation: 'Navigation',
@@ -384,6 +398,7 @@ export const translations: Record<string, Translation> = {
     home: 'Inicio',
     features: 'Características',
     pricing: 'Precios',
+    docs: 'Documentación',
     about: 'Acerca de',
     blog: 'Blog',
     contact: 'Contacto',
@@ -495,6 +510,12 @@ export const translations: Record<string, Translation> = {
     faqAnswer2: 'Te notificaremos antes de que alcances tus límites. Para almacenamiento y ancho de banda, puedes actualizar tu plan o comprar recursos adicionales según sea necesario.',
     faqQuestion3: '¿Ofrecen soluciones empresariales personalizadas?',
     faqAnswer3: '¡Absolutamente! Nuestro plan Enterprise incluye configuraciones personalizadas, soporte dedicado, y puede adaptarse para cumplir requisitos específicos de cumplimiento y rendimiento.',
+    faqQuestion4: '¿Hay algún límite o cuota de almacenamiento incluido en el plan?',
+    faqAnswer4: 'Con nuestro Plan Pro, no hay límite o cuota de almacenamiento. Puedes cachear tanto datos como necesites. Ten en cuenta: los archivos que no se han descargado en los últimos 30 días serán eliminados automáticamente para optimizar recursos. Sin embargo, el almacenamiento es gratuito y puedes volver a cachear cualquier archivo en cualquier momento sin limitaciones.',
+    faqQuestion5: '¿Hay algún requisito o restricción en la proporción entre contenido almacenado y uso de ancho de banda?',
+    faqAnswer5: 'No, no hay tales restricciones. Snapbyte es un sistema de caché de datos, y solo cobramos basado en el uso real de ancho de banda. De hecho, alentamos la alta actividad de descarga. Para archivos de bajo acceso, aplicamos la política de purga automática de 30 días mencionada arriba, pero siempre eres libre de solicitar que esos archivos sean cacheados nuevamente en cualquier momento.',
+    faqQuestion6: '¿Tienen algunas pautas de uso o mejores prácticas para una eficiencia óptima de caché?',
+    faqAnswer6: 'Snapbyte todavía está en su etapa temprana, y aunque nuestra documentación está evolucionando, puedes encontrar información útil en: https://docs.snapbyte.io. También ofrecemos soporte gratuito y pruebas para ayudarte a comenzar. No dudes en contactar directamente vía Telegram a nuestro cofundador: @neokrypt',
     
     // Footer & Legal
     navigation: 'Navegación',
@@ -566,6 +587,7 @@ export const translations: Record<string, Translation> = {
     home: 'Accueil',
     features: 'Fonctionnalités',
     pricing: 'Tarifs',
+    docs: 'Documentation',
     about: 'À propos',
     blog: 'Blog',
     contact: 'Contact',
@@ -675,6 +697,12 @@ export const translations: Record<string, Translation> = {
     faqAnswer2: 'Nous vous notifierons avant que vous atteigniez vos limites. Pour le stockage et la bande passante, vous pouvez soit mettre à niveau votre plan soit acheter des ressources supplémentaires selon vos besoins.',
     faqQuestion3: 'Proposez-vous des solutions d\'entreprise personnalisées?',
     faqAnswer3: 'Absolument! Notre plan Enterprise inclut des configurations personnalisées, un support dédié, et peut être adapté pour répondre aux exigences spécifiques de conformité et de performance.',
+    faqQuestion4: 'Y a-t-il une limite ou un quota de stockage inclus dans le plan?',
+    faqAnswer4: 'Avec notre Plan Pro, il n\'y a pas de limite ou quota de stockage. Vous pouvez mettre en cache autant de données que nécessaire. Veuillez noter: les fichiers qui n\'ont pas été téléchargés au cours des 30 derniers jours seront automatiquement purgés pour optimiser les ressources. Cependant, le stockage est gratuit et vous pouvez remettre en cache n\'importe quel fichier à tout moment sans limitations.',
+    faqQuestion5: 'Y a-t-il des exigences ou restrictions sur le ratio entre le contenu stocké et l\'utilisation de la bande passante?',
+    faqAnswer5: 'Non, il n\'y a pas de telles restrictions. Snapbyte est un système de mise en cache de données, et nous ne facturons que basé sur l\'utilisation réelle de la bande passante. En fait, nous encourageons une activité de téléchargement élevée. Pour les fichiers peu accessibles, nous appliquons la politique de purge automatique de 30 jours mentionnée ci-dessus, mais vous êtes toujours libre de demander que ces fichiers soient remis en cache à tout moment.',
+    faqQuestion6: 'Avez-vous des directives d\'utilisation ou meilleures pratiques pour une efficacité de mise en cache optimale?',
+    faqAnswer6: 'Snapbyte en est encore à ses débuts, et bien que notre documentation évolue, vous pouvez trouver des informations utiles à: https://docs.snapbyte.io. Nous offrons également un support gratuit et des tests pour vous aider à commencer. N\'hésitez pas à contacter directement via Telegram notre cofondateur: @neokrypt',
     
     // Footer & Legal
     navigation: 'Navigation',
@@ -746,6 +774,7 @@ export const translations: Record<string, Translation> = {
     home: 'Startseite',
     features: 'Funktionen',
     pricing: 'Preise',
+    docs: 'Dokumentation',
     about: 'Über uns',
     blog: 'Blog',
     contact: 'Kontakt',
@@ -855,6 +884,12 @@ export const translations: Record<string, Translation> = {
     faqAnswer2: 'Wir benachrichtigen Sie, bevor Sie Ihre Limits erreichen. Für Speicher und Bandbreite können Sie entweder Ihren Plan aktualisieren oder zusätzliche Ressourcen nach Bedarf kaufen.',
     faqQuestion3: 'Bieten Sie maßgeschneiderte Unternehmenslösungen an?',
     faqAnswer3: 'Absolut! Unser Enterprise-Plan umfasst benutzerdefinierte Konfigurationen, dedizierten Support und kann an spezifische Compliance- und Leistungsanforderungen angepasst werden.',
+    faqQuestion4: 'Gibt es ein Speicherlimit oder eine Speicherquote im Plan?',
+    faqAnswer4: 'Mit unserem Pro-Plan gibt es kein Speicherlimit oder -quota. Sie können so viele Daten zwischenspeichern, wie Sie benötigen. Bitte beachten Sie: Dateien, die in den letzten 30 Tagen nicht heruntergeladen wurden, werden automatisch gelöscht, um Ressourcen zu optimieren. Der Speicher ist jedoch kostenlos und Sie können jede Datei jederzeit ohne Einschränkungen erneut zwischenspeichern.',
+    faqQuestion5: 'Gibt es Anforderungen oder Beschränkungen bezüglich des Verhältnisses zwischen gespeicherten Inhalten und Bandbreitennutzung?',
+    faqAnswer5: 'Nein, es gibt keine solchen Beschränkungen. Snapbyte ist ein Daten-Caching-System, und wir berechnen nur basierend auf der tatsächlichen Bandbreitennutzung. Tatsächlich ermutigen wir zu hoher Download-Aktivität. Für selten genutzte Dateien wenden wir die oben erwähnte 30-Tage-Auto-Purge-Richtlinie an, aber Sie können jederzeit frei verlangen, dass diese Dateien wieder zwischengespeichert werden.',
+    faqQuestion6: 'Haben Sie Nutzungsrichtlinien oder bewährte Praktiken für optimale Caching-Effizienz?',
+    faqAnswer6: 'Snapbyte befindet sich noch in der frühen Phase, und während sich unsere Dokumentation weiterentwickelt, finden Sie hilfreiche Informationen unter: https://docs.snapbyte.io. Wir bieten auch kostenlosen Support und Tests, um Ihnen den Einstieg zu erleichtern. Zögern Sie nicht, sich direkt über Telegram an unseren Mitgründer zu wenden: @neokrypt',
     
     // Footer & Legal
     navigation: 'Navigation',
@@ -926,6 +961,7 @@ export const translations: Record<string, Translation> = {
     home: 'ホーム',
     features: '機能',
     pricing: '料金',
+    docs: 'ドキュメント',
     about: '会社概要',
     blog: 'ブログ',
     contact: 'お問い合わせ',
@@ -1035,6 +1071,12 @@ export const translations: Record<string, Translation> = {
     faqAnswer2: '制限に達する前に通知いたします。ストレージと帯域幅については、プランをアップグレードするか、必要に応じて追加リソースを購入できます。',
     faqQuestion3: 'カスタムエンタープライズソリューションは提供していますか？',
     faqAnswer3: 'もちろんです！Enterpriseプランには、カスタム設定、専用サポートが含まれ、特定のコンプライアンスとパフォーマンス要件に合わせて調整できます。',
+    faqQuestion4: 'プランにストレージ制限やクォータは含まれていますか？',
+    faqAnswer4: 'Proプランでは、ストレージ制限やクォータはありません。必要なだけデータをキャッシュできます。注意：過去30日間にダウンロードされていないファイルは、リソースを最適化するために自動的にパージされます。ただし、ストレージは無料で、いつでも制限なくファイルを再キャッシュできます。',
+    faqQuestion5: '保存されたコンテンツと帯域幅使用量の比率に関する要件や制限はありますか？',
+    faqAnswer5: 'いいえ、そのような制限はありません。Snapbyteはデータキャッシングシステムであり、実際の帯域幅使用量のみに基づいて課金します。実際、高いダウンロード活動を推奨しています。アクセス頻度の低いファイルには上記の30日自動パージポリシーを適用しますが、いつでもそれらのファイルを再度キャッシュするよう要求することができます。',
+    faqQuestion6: '最適なキャッシング効率のための使用ガイドラインやベストプラクティスはありますか？',
+    faqAnswer6: 'Snapbyteはまだ初期段階にあり、ドキュメントは進化していますが、https://docs.snapbyte.io で有用な情報を見つけることができます。また、開始をサポートするための無料サポートとテストも提供しています。共同創設者にTelegramで直接連絡することをお気軽にどうぞ：@neokrypt',
     
     // Footer & Legal
     navigation: 'ナビゲーション',
@@ -1106,6 +1148,7 @@ export const translations: Record<string, Translation> = {
     home: '首页',
     features: '功能',
     pricing: '定价',
+    docs: '文档',
     about: '关于我们',
     blog: '博客',
     contact: '联系我们',
@@ -1215,6 +1258,12 @@ export const translations: Record<string, Translation> = {
     faqAnswer2: '我们会在您达到限制之前通知您。对于存储和带宽，您可以升级您的计划或根据需要购买额外资源。',
     faqQuestion3: '你们提供定制的企业解决方案吗？',
     faqAnswer3: '当然！我们的企业计划包括自定义配置、专用支持，并可以根据特定的合规性和性能要求进行定制。',
+    faqQuestion4: '计划中是否包含存储限制或配额？',
+    faqAnswer4: '使用我们的专业计划，没有存储限制或配额。您可以缓存所需的任意数量数据。请注意：过去30天内未下载的文件将被自动清除以优化资源。但是，存储是免费的，您可以随时无限制地重新缓存任何文件。',
+    faqQuestion5: '对于存储内容和带宽使用之间的比例是否有任何要求或限制？',
+    faqAnswer5: '不，没有此类限制。Snapbyte是一个数据缓存系统，我们仅根据实际带宽使用量收费。实际上，我们鼓励高下载活动。对于低访问文件，我们应用上述30天自动清除政策，但您始终可以自由要求重新缓存这些文件。',
+    faqQuestion6: '您是否有使用指南或最佳实践来实现最佳缓存效率？',
+    faqAnswer6: 'Snapbyte仍处于早期阶段，虽然我们的文档在不断发展，但您可以在https://docs.snapbyte.io找到有用的信息。我们还提供免费支持和测试来帮助您入门。欢迎通过Telegram直接联系我们的联合创始人：@neokrypt',
     
     // Footer & Legal
     navigation: '导航',
@@ -1286,6 +1335,7 @@ export const translations: Record<string, Translation> = {
     home: 'Trang chủ',
     features: 'Tính năng',
     pricing: 'Bảng giá',
+    docs: 'Tài liệu',
     about: 'Về chúng tôi',
     blog: 'Blog',
     contact: 'Liên hệ',
@@ -1395,6 +1445,12 @@ export const translations: Record<string, Translation> = {
     faqAnswer2: 'Chúng tôi sẽ thông báo cho bạn trước khi bạn đạt đến giới hạn. Đối với dung lượng lưu trữ và băng thông, bạn có thể nâng cấp gói của mình hoặc mua thêm tài nguyên khi cần.',
     faqQuestion3: 'Bạn có cung cấp các giải pháp doanh nghiệp tùy chỉnh không?',
     faqAnswer3: 'Chắc chắn rồi! Gói Doanh nghiệp của chúng tôi bao gồm các cấu hình tùy chỉnh, hỗ trợ chuyên biệt và có thể được điều chỉnh để đáp ứng các yêu cầu cụ thể về tuân thủ và hiệu suất.',
+    faqQuestion4: 'Có giới hạn lưu trữ hoặc hạn ngạch nào được bao gồm trong gói không?',
+    faqAnswer4: 'Với Gói Pro của chúng tôi, không có giới hạn lưu trữ hoặc hạn ngạch. Bạn có thể cache bao nhiêu dữ liệu tùy ý. Lưu ý: các tệp không được tải xuống trong 30 ngày qua sẽ tự động bị xóa để tối ưu hóa tài nguyên. Tuy nhiên, lưu trữ là miễn phí và bạn có thể cache lại bất kỳ tệp nào bất cứ lúc nào mà không có giới hạn.',
+    faqQuestion5: 'Có yêu cầu hoặc hạn chế nào về tỷ lệ giữa nội dung được lưu trữ và việc sử dụng băng thông không?',
+    faqAnswer5: 'Không, không có các hạn chế như vậy. Snapbyte là một hệ thống cache dữ liệu, và chúng tôi chỉ tính phí dựa trên việc sử dụng băng thông thực tế. Thực tế, chúng tôi khuyến khích hoạt động tải xuống cao. Đối với các tệp ít được truy cập, chúng tôi áp dụng chính sách tự động xóa 30 ngày được đề cập ở trên, nhưng bạn luôn có thể yêu cầu các tệp đó được cache lại bất cứ lúc nào.',
+    faqQuestion6: 'Bạn có hướng dẫn sử dụng hoặc thực hành tốt nhất nào để đạt hiệu quả cache tối ưu không?',
+    faqAnswer6: 'Snapbyte vẫn đang trong giai đoạn đầu, và mặc dù tài liệu của chúng tôi đang phát triển, bạn có thể tìm thấy thông tin hữu ích tại: https://docs.snapbyte.io. Chúng tôi cũng cung cấp hỗ trợ miễn phí và thử nghiệm để giúp bạn bắt đầu. Hãy liên hệ trực tiếp qua Telegram với đồng sáng lập của chúng tôi: @neokrypt',
     
     // Footer & Legal
     navigation: 'Điều hướng',
