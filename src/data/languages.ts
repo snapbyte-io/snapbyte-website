@@ -192,6 +192,22 @@ export interface Translation {
   totalMonthlyCost: string;
   pbPerMonthDataTransfer: string;
   tbPerMonthStorage: string;
+
+  // Chatbot
+  chatbotTitle: string;
+  chatbotWelcome: string;
+  chatbotPlaceholder: string;
+  chatbotConnecting: string;
+  chatbotOnline: string;
+  chatbotOffline: string;
+  chatbotError: string;
+  chatbotSendButton: string;
+  chatbotQuickQuestionsTitle: string;
+  chatbotQuickQuestion1: string;
+  chatbotQuickQuestion2: string;
+  chatbotQuickQuestion3: string;
+  chatbotQuickQuestion4: string;
+  chatbotQuickQuestion5: string;
 }
 
 export const languages: Language[] = [
@@ -392,6 +408,22 @@ export const translations: Record<string, Translation> = {
     totalMonthlyCost: 'Total',
     pbPerMonthDataTransfer: '1 PB/month Data Transfer',
     tbPerMonthStorage: '1 TB/month Storage',
+
+    // Chatbot
+    chatbotTitle: 'Snapbee Assistant',
+    chatbotWelcome: 'Hello! I\'m here to help you with any questions about Snapbyte. How can I assist you today?',
+    chatbotPlaceholder: 'Type your message...',
+    chatbotConnecting: 'Connecting...',
+    chatbotOnline: 'Online',
+    chatbotOffline: 'Offline',
+    chatbotError: 'Sorry, I encountered an error. Please try again.',
+    chatbotSendButton: 'Send',
+    chatbotQuickQuestionsTitle: 'Quick questions:',
+    chatbotQuickQuestion1: 'Is there any storage limit?',
+    chatbotQuickQuestion2: 'Any requirements on content/bandwidth ratio?',
+    chatbotQuickQuestion3: 'Usage guidelines for optimal caching?',
+    chatbotQuickQuestion4: 'How fast is your system?',
+    chatbotQuickQuestion5: 'Will I reduce costs?',
   },
   es: {
     // Navigation
@@ -581,6 +613,22 @@ export const translations: Record<string, Translation> = {
     totalMonthlyCost: 'Costo total',
     pbPerMonthDataTransfer: '1 PB/mes Transferencia de Datos',
     tbPerMonthStorage: '1 TB/mes Almacenamiento',
+
+    // Chatbot
+    chatbotTitle: 'Asistente de Snapbee',
+    chatbotWelcome: '¡Hola! Estoy aquí para ayudarte con cualquier pregunta sobre Snapbyte. ¿Cómo puedo asistirte hoy?',
+    chatbotPlaceholder: 'Escribe tu mensaje...',
+    chatbotConnecting: 'Conectando...',
+    chatbotOnline: 'En línea',
+    chatbotOffline: 'Desconectado',
+    chatbotError: 'Lo siento, encontré un error. Por favor, inténtalo de nuevo.',
+    chatbotSendButton: 'Enviar',
+    chatbotQuickQuestionsTitle: 'Preguntas rápidas:',
+    chatbotQuickQuestion1: '¿Hay límite de almacenamiento?',
+    chatbotQuickQuestion2: '¿Requisitos en la relación contenido/ancho de banda?',
+    chatbotQuickQuestion3: '¿Guías para un cacheo óptimo?',
+    chatbotQuickQuestion4: '¿Qué tan rápido es su sistema?',
+    chatbotQuickQuestion5: '¿Podré reducir costos?',
   },
   fr: {
     // Navigation
@@ -768,6 +816,22 @@ export const translations: Record<string, Translation> = {
     totalMonthlyCost: 'Coût total',
     pbPerMonthDataTransfer: '1 PB/mois Transfert de Données',
     tbPerMonthStorage: '1 TB/mois Stockage',
+
+    // Chatbot
+    chatbotTitle: 'Assistant Snapbyte',
+    chatbotWelcome: 'Bonjour! Je suis ici pour vous aider avec toutes vos questions sur Snapbyte. Comment puis-je vous assister aujourd\'hui?',
+    chatbotPlaceholder: 'Tapez votre message...',
+    chatbotConnecting: 'Connexion...',
+    chatbotOnline: 'En ligne',
+    chatbotOffline: 'Hors ligne',
+    chatbotError: 'Désolé, j\'ai rencontré une erreur. Veuillez réessayer.',
+    chatbotSendButton: 'Envoyer',
+    chatbotQuickQuestionsTitle: 'Questions rapides:',
+    chatbotQuickQuestion1: 'Y a-t-il une limite de stockage?',
+    chatbotQuickQuestion2: 'Exigences sur le ratio contenu/bande passante?',
+    chatbotQuickQuestion3: 'Conseils pour un cache optimisé?',
+    chatbotQuickQuestion4: 'Quelle est la vitesse de votre système?',
+    chatbotQuickQuestion5: 'Puis-je réduire les coûts?',
   },
   de: {
     // Navigation
@@ -955,6 +1019,21 @@ export const translations: Record<string, Translation> = {
     totalMonthlyCost: 'Gesamte Kosten',
     pbPerMonthDataTransfer: '1 PB/Monat Datenübertragung',
     tbPerMonthStorage: '1 TB/Monat Speicher',
+    // Chatbot
+    chatbotTitle: 'Snapbyte Assistent',
+    chatbotWelcome: 'Hallo! Ich bin hier, um Ihnen bei allen Fragen zu Snapbyte zu helfen. Wie kann ich Ihnen heute behilflich sein?',
+    chatbotPlaceholder: 'Geben Sie Ihre Nachricht ein...',
+    chatbotConnecting: 'Verbinden...',
+    chatbotOnline: 'Online',
+    chatbotOffline: 'Offline',
+    chatbotError: 'Entschuldigung, ich habe einen Fehler festgestellt. Bitte versuchen Sie es erneut.',
+    chatbotSendButton: 'Senden',
+    chatbotQuickQuestionsTitle: 'Schnelle Fragen:',
+    chatbotQuickQuestion1: 'Gibt es ein Speicherlimit?',
+    chatbotQuickQuestion2: 'Anforderungen an Inhalt/Bandbreite-Verhältnis?',
+    chatbotQuickQuestion3: 'Richtlinien für optimales Caching?',
+    chatbotQuickQuestion4: 'Wie schnell ist Ihr System?',
+    chatbotQuickQuestion5: 'Kann ich Kosten senken?',
   },
   ja: {
     // Navigation
@@ -1142,6 +1221,21 @@ export const translations: Record<string, Translation> = {
     totalMonthlyCost: '月額総コスト',
     pbPerMonthDataTransfer: '1 PB/月のデータ転送',
     tbPerMonthStorage: '1 TB/月のストレージ',
+    // Chatbot
+    chatbotTitle: 'Snapbyteアシスタント',
+    chatbotWelcome: 'こんにちは！Snapbyteに関する質問をお手伝いします。今日はどのようにお手伝いできますか？',
+    chatbotPlaceholder: 'メッセージを入力...',
+    chatbotConnecting: '接続中...',
+    chatbotOnline: 'オンライン',
+    chatbotOffline: 'オフライン',
+    chatbotError: '申し訳ありませんが、エラーが発生しました。もう一度お試しください。',
+    chatbotSendButton: '送信',
+    chatbotQuickQuestionsTitle: 'よくある質問:',
+    chatbotQuickQuestion1: 'ストレージ制限はありますか？',
+    chatbotQuickQuestion2: 'コンテンツ/帯域幅比の要件は？',
+    chatbotQuickQuestion3: '最適なキャッシュのガイドライン？',
+    chatbotQuickQuestion4: 'システムの速度はどの程度？',
+    chatbotQuickQuestion5: 'コスト削減できますか？',
   },
   zh: {
     // Navigation
@@ -1329,6 +1423,21 @@ export const translations: Record<string, Translation> = {
     totalMonthlyCost: '月度总费用',
     pbPerMonthDataTransfer: '每月1 PB数据传输',
     tbPerMonthStorage: '每月1 TB存储',
+    // Chatbot
+    chatbotTitle: 'Snapbyte助手',
+    chatbotWelcome: '您好！我在这里帮助您解答有关Snapbyte的任何问题。今天我能为您做些什么？',
+    chatbotPlaceholder: '输入您的消息...',
+    chatbotConnecting: '连接中...',
+    chatbotOnline: '在线',
+    chatbotOffline: '离线',
+    chatbotError: '抱歉，我遇到了一个错误。请再试一次。',
+    chatbotSendButton: '发送',
+    chatbotQuickQuestionsTitle: '常见问题：',
+    chatbotQuickQuestion1: '有存储限制吗？',
+    chatbotQuickQuestion2: '内容/带宽比例有要求吗？',
+    chatbotQuickQuestion3: '最佳缓存使用指南？',
+    chatbotQuickQuestion4: '你们的系统有多快？',
+    chatbotQuickQuestion5: '我能降低成本吗？',
   },
   vi: {
     // Navigation
@@ -1516,6 +1625,21 @@ export const translations: Record<string, Translation> = {
     totalMonthlyCost: 'Tổng chi phí',
     pbPerMonthDataTransfer: '1 PB chuyển dữ liệu/tháng',
     tbPerMonthStorage: '1 TB lưu trữ/tháng',
+    // Chatbot
+    chatbotTitle: 'Trợ lý Snapbyte',
+    chatbotWelcome: 'Xin chào! Tôi ở đây để giúp bạn với bất kỳ câu hỏi nào về Snapbyte. Hôm nay tôi có thể giúp gì cho bạn?',
+    chatbotPlaceholder: 'Nhập tin nhắn của bạn...',
+    chatbotConnecting: 'Đang kết nối...',
+    chatbotOnline: 'Trực tuyến',
+    chatbotOffline: 'Ngoại tuyến',
+    chatbotError: 'Xin lỗi, tôi đã gặp lỗi. Vui lòng thử lại.',
+    chatbotSendButton: 'Gửi',
+    chatbotQuickQuestionsTitle: 'Câu hỏi nhanh:',
+    chatbotQuickQuestion1: 'Có giới hạn lưu trữ không?',
+    chatbotQuickQuestion2: 'Yêu cầu về tỷ lệ nội dung/băng thông?',
+    chatbotQuickQuestion3: 'Hướng dẫn cache tối ưu?',
+    chatbotQuickQuestion4: 'Hệ thống nhanh như thế nào?',
+    chatbotQuickQuestion5: 'Tôi có thể giảm chi phí không?',
   }
 };
 

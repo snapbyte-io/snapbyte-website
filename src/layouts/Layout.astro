@@ -1,5 +1,6 @@
 ---
 import { siteConfig } from '../data/site-config';
+import ChatbotButton from '../components/ChatbotButton';
 
 export interface Props {
   title?: string;
@@ -69,6 +70,9 @@ const siteTitle = title === siteConfig.name ? title : `${title} | ${siteConfig.n
   
   <body class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white antialiased transition-colors duration-300">
     <slot />
+    
+    <!-- Chatbot -->
+    <ChatbotButton client:load />
     
     <!-- I18n and Header Controls Scripts -->
     <script>
