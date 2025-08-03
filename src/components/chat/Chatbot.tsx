@@ -38,7 +38,7 @@ export const Chatbot: React.FC<ChatbotProps> = ({ isOpen, onClose }) => {
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages]);
+  }, [messages, isOpen]);
 
   useEffect(() => {
     if (isOpen && !sessionId && !isLoading) {

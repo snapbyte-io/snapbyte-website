@@ -410,7 +410,7 @@ export const translations: Record<string, Translation> = {
     tbPerMonthStorage: '1 TB/month Storage',
 
     // Chatbot
-    chatbotTitle: 'Snapbee Assistant',
+    chatbotTitle: 'Snapbyte Assistant',
     chatbotWelcome: 'Hello! I\'m here to help you with any questions about Snapbyte. How can I assist you today?',
     chatbotPlaceholder: 'Type your message...',
     chatbotConnecting: 'Connecting...',
@@ -615,7 +615,7 @@ export const translations: Record<string, Translation> = {
     tbPerMonthStorage: '1 TB/mes Almacenamiento',
 
     // Chatbot
-    chatbotTitle: 'Asistente de Snapbee',
+    chatbotTitle: 'Asistente de Snapbyte',
     chatbotWelcome: '¡Hola! Estoy aquí para ayudarte con cualquier pregunta sobre Snapbyte. ¿Cómo puedo asistirte hoy?',
     chatbotPlaceholder: 'Escribe tu mensaje...',
     chatbotConnecting: 'Conectando...',
