@@ -68,7 +68,7 @@ export const pricingPlans: PricingPlan[] = [
     storageFeesKey: "noStorageFees",
     storageFees: "No storage fees",
     bandwidthPriceKey: "pbPerMonthDataTransfer",
-    bandwidthPrice: 2990, // $2990 per PB per month
+    bandwidthPrice: 1990, // $2990 per PB per month
     popular: true,
     ctaKey: "getStartedFree",
     cta: "Get Started Free",
@@ -95,7 +95,7 @@ export const pricingPlans: PricingPlan[] = [
     storageFeesKey: "enterpriseStorageFees", 
     storageFees: "Storage fee included",
     bandwidthPriceKey: "pbPerMonthDataTransfer",
-    bandwidthPrice: 2990, // $2990 per PB per month
+    bandwidthPrice: 1990, // $2990 per PB per month
     storagePriceKey: "tbPerMonthStorage",
     storagePrice: 7, // $7 per TB per month
     specialNoteKey: "enterpriseNote",
