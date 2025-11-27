@@ -68,7 +68,7 @@ export const pricingPlans: PricingPlan[] = [
     storageFeesKey: "noStorageFees",
     storageFees: "No storage fees",
     bandwidthPriceKey: "pbPerMonthDataTransfer",
-    bandwidthPrice: 1990, // $2990 per PB per month
+    bandwidthPrice: 1000, // $2990 per PB per month
     popular: true,
     ctaKey: "getStartedFree",
     cta: "Get Started Free",
@@ -95,9 +95,9 @@ export const pricingPlans: PricingPlan[] = [
     storageFeesKey: "enterpriseStorageFees", 
     storageFees: "Storage fee included",
     bandwidthPriceKey: "pbPerMonthDataTransfer",
-    bandwidthPrice: 1990, // $2990 per PB per month
-    storagePriceKey: "tbPerMonthStorage",
-    storagePrice: 7, // $7 per TB per month
+    bandwidthPrice: 2999, // $2990 per PB per month
+    storageFeesKey: "noStorageFees",
+    storageFees: "No storage fees",
     specialNoteKey: "enterpriseNote",
     specialNote: "⚠️ Note: Although files are cached permanently, Snapbyte is a data caching system — it should not be used as a primary or long-term storage location.",
     ctaKey: "contactSales",
